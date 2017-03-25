@@ -4,7 +4,8 @@ import { Animated, View, StyleSheet, Dimensions } from 'react-native';
 import { TabViewAnimated, TabBarTop } from 'react-native-tab-view';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import Screens from './Screens';
-import { bottomBarColor } from '../constants/color';
+import { purple } from '../constants/color';
+import { topNotificationAreaHeight } from '../constants/dimens';
 import { fetchCategories, fetchPosts, fetchTags } from '../actions';
 
 const { width, height } = Dimensions.get('window');
@@ -73,7 +74,7 @@ class Home extends Component {
 
   _renderLabel = (props: any) => ({ route, index }) => {
     const inputRange = props.navigationState.routes.map((x, i) => i);
-    const outputRange = inputRange.map(inputIndex => inputIndex === index ? bottomBarColor : '#222');
+    const outputRange = inputRange.map(inputIndex => inputIndex === index ? purple : '#222');
     const color = props.position.interpolate({
       inputRange,
       outputRange,
@@ -146,13 +147,14 @@ export default connect(mapStateToProps)(Home);
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: purple
   },
   indicator: {
-    backgroundColor: bottomBarColor,
+    backgroundColor: purple,
   },
   label: {
     fontSize: 13,
-    fontWeight: 'bold',
+    fontWeight: '400',
     height: 20
   },
   tabbar: {
@@ -177,6 +179,6 @@ const styles = StyleSheet.create({
     left: 0,
     right: 0,
     bottom: 0,
-    color: bottomBarColor,
+    color: purple,
   },
 });

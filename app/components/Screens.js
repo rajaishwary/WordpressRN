@@ -7,6 +7,7 @@ import {
     TouchableHighlight,
     AlertIOS
 } from 'react-native';
+import { topNotificationAreaHeight } from '../constants/dimens';
 
 export default class Screens extends Component {
     render() {
@@ -23,6 +24,7 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: 'lightblue',
+        backgroundColor: 'transparent',
+        top: topNotificationAreaHeight
     },
 });
