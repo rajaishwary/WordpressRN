@@ -1,0 +1,1 @@
+export const bottomBarColor = '#885EAD';

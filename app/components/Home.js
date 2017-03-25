@@ -1,10 +1,16 @@
 import React, { Component } from 'react';
-import { Animated, View, StyleSheet } from 'react-native';
+import { connect } from 'react-redux';
+import { Animated, View, StyleSheet, Dimensions } from 'react-native';
 import { TabViewAnimated, TabBarTop } from 'react-native-tab-view';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 import Screens from './Screens';
-import { fetchAvailableSports } from '../actions';
+import { bottomBarColor } from '../constants/color';
+import { fetchCategories, fetchPosts, fetchTags } from '../actions';
 
-export default class Home extends Component {
+const { width, height } = Dimensions.get('window');
+const AnimatedIcon = Animated.createAnimatedComponent(Ionicons);
+
+class Home extends Component {
   static title = 'Scroll views';
   static backgroundColor = '#fff';
   static tintColor = '#222';
@@ -17,17 +23,15 @@ export default class Home extends Component {
   state = {
     index: 0,
     routes: [
-      { key: '1', title: 'Sports' },
-      { key: '2', title: 'Trending' },
-      { key: '3', title: 'Message' },
-      { key: '4', title: 'Profile' },
+      { key: '1', title: 'RECENT', icon: 'ios-bookmarks' },
+      { key: '2', title: 'CATEGORIES', icon: 'ios-keypad' },
+      { key: '3', title: 'TAGS', icon: 'ios-list-box' },
     ],
   };
 
   _first: Object;
   _second: Object;
   _third: Object;
-  _forth: Object;
 
   _handleChangeTab = (index) => {
     this.setState({
@@ -39,34 +43,49 @@ export default class Home extends Component {
     if (route !== this.state.routes[this.state.index]) {
       return;
     }
-    switch (route.key) {
-    case '1':
-      this._first.scrollTo({ y: 0 });
-      break;
-    case '2':
-      this._second.scrollTo({ y: 0 });
-      break;
-    case '3':
-      this._third.scrollTo({ y: 0 });
-      break;
-    case '4':
-      this._forth.scrollTo({ y: 0 });
-      break;
-    }
+  };
+
+  _renderIcon = ({ navigationState, position }) => ({ route, index }: any) => {
+    const inputRange = navigationState.routes.map((x, i) => i);
+    const filledOpacity = position.interpolate({
+      inputRange,
+      outputRange: inputRange.map(i => i === index ? 1 : 0),
+    });
+    const outlineOpacity = position.interpolate({
+      inputRange,
+      outputRange: inputRange.map(i => i === index ? 0 : 1),
+    });
+    return (
+      <View style={styles.iconContainer}>
+        <AnimatedIcon
+          name={route.icon}
+          size={20}
+          style={[ styles.icon, { opacity: filledOpacity } ]}
+        />
+        <AnimatedIcon
+          name={route.icon + '-outline'}
+          size={20}
+          style={[ styles.icon, styles.outline, { opacity: outlineOpacity } ]}
+        />
+      </View>
+    );
   };
 
   _renderLabel = (props: any) => ({ route, index }) => {
     const inputRange = props.navigationState.routes.map((x, i) => i);
-    const outputRange = inputRange.map(inputIndex => inputIndex === index ? '#D6356C' : '#222');
+    const outputRange = inputRange.map(inputIndex => inputIndex === index ? bottomBarColor : '#222');
     const color = props.position.interpolate({
       inputRange,
       outputRange,
     });
 
     return (
-      <Animated.Text style={[ styles.label, { color } ]}>
-        {route.title}
-      </Animated.Text>
+      <Animated.View style={{justifyContent: 'center'}}>
+          {this._renderIcon(props)({ route, index })}
+          <Animated.Text style={[ styles.label, { color } ]}>
+            {route.title}
+          </Animated.Text>
+      </Animated.View>
     );
   };
 
@@ -79,7 +98,7 @@ export default class Home extends Component {
         renderLabel={this._renderLabel(props)}
         indicatorStyle={styles.indicator}
         tabStyle={styles.tab}
-        tabWidth={90}
+        tabWidth={width / 3}
         style={styles.tabbar}
       />
     );
@@ -93,19 +112,18 @@ export default class Home extends Component {
       return <Screens/>;
     case '3':
       return <Screens/>;
-    case '4':
-      return <Screens/>;
     default:
       return null;
     }
   };
 
-  componentDidMount() {
+  componentWillMount() {
     const { dispatch } = this.props;
-    dispatch(fetchAvailableSports());
+    dispatch(fetchCategories());
   }
 
   render() {
+    console.log(this.props);
     return (
       <TabViewAnimated
         style={[ styles.container, this.props.style ]}
@@ -118,20 +136,27 @@ export default class Home extends Component {
   }
 }
 
+function mapStateToProps(state) {
+  const { categories } = state;
+  return { categories };
+}
+
+export default connect(mapStateToProps)(Home);
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
   },
   indicator: {
-    backgroundColor: '#ff4081',
+    backgroundColor: bottomBarColor,
   },
   label: {
     fontSize: 13,
     fontWeight: 'bold',
-    margin: 8,
+    height: 20
   },
   tabbar: {
-    backgroundColor: '#fff',
+    backgroundColor: '#f4f4f4',
   },
   tab: {
     opacity: 1,
@@ -139,5 +164,19 @@ const styles = StyleSheet.create({
   page: {
     backgroundColor: '#f9f9f9',
   },
+  iconContainer: {
+    height: 30,
+    width: 30,
+    justifyContent: 'center',
+    alignSelf: 'center'
+  },
+  icon: {
+    position: 'absolute',
+    textAlign: 'center',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    color: bottomBarColor,
+  },
 });
-
