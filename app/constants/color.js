@@ -1,1 +1,1 @@
-export const bottomBarColor = '#885EAD';
+export const purple = '#885EAD';
