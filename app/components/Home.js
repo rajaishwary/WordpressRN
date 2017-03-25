@@ -5,10 +5,11 @@ import { TabViewAnimated, TabBarTop } from 'react-native-tab-view';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import Screens from './Screens';
 import { purple } from '../constants/color';
-import { topNotificationAreaHeight } from '../constants/dimens';
 import { fetchCategories, fetchPosts, fetchTags } from '../actions';
+import { topNotificationAreaHeight, getScreenHeight } from '../constants/dimens';
 
-const { width, height } = Dimensions.get('window');
+const height = getScreenHeight();
+const { width } = Dimensions.get('window');
 const AnimatedIcon = Animated.createAnimatedComponent(Ionicons);
 
 class Home extends Component {
@@ -147,7 +148,7 @@ export default connect(mapStateToProps)(Home);
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: purple
+    backgroundColor: 'transparent',
   },
   indicator: {
     backgroundColor: purple,
