@@ -7,14 +7,12 @@ import {
     TouchableHighlight,
     AlertIOS
 } from 'react-native';
-import TopNotificationArea from '../common/TopNotificationArea';
 
-export default class Message extends Component {
+export default class Screens extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <TopNotificationArea/>
-                <Text>Message</Text>
+                <Text>Screen</Text>
             </View>
         );
     }

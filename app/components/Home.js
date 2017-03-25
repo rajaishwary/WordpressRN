@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
 import { Animated, View, StyleSheet } from 'react-native';
 import { TabViewAnimated, TabBarTop } from 'react-native-tab-view';
-import Sports from './Sports';
-import Trending from './Trending';
-import Message from './Message';
-import Profile from './Profile';
+import Screens from './Screens';
 import { fetchAvailableSports } from '../actions';
 
 export default class Home extends Component {
@@ -91,13 +88,13 @@ export default class Home extends Component {
   _renderScene = ({ route }) => {
     switch (route.key) {
     case '1':
-      return <Sports ref={el => (this._first = el)} style={styles.page} navigator={this.props.navigator}/>;
+      return <Screens/>;
     case '2':
-      return <Trending ref={el => (this._second = el)} style={styles.page} />;
+      return <Screens/>;
     case '3':
-      return <Message/>;
+      return <Screens/>;
     case '4':
-      return <Profile/>;
+      return <Screens/>;
     default:
       return null;
     }

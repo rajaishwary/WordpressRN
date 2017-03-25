@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux';
-import sports from './sports';
+import posts from './posts';
+import categories from './categories';
 
 const rootReducer = combineReducers({
-    sports
+    posts,
+    categories
 });
 
 export default rootReducer;

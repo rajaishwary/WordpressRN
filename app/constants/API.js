@@ -1,5 +1,9 @@
 export const PROTOCOL = 'http';
 
-export const API = `${PROTOCOL}://khelomoredev-api-staging.herokuapp.com/api/`;
+export const API = `${PROTOCOL}://hindi.theviralpages.com/wp-json/wp/v2`;
 
-export const GET_AVAILABLE_SPORTS = `${API}/sports`;
+export const GET_POSTS = `${API}/posts`;
+
+export const GET_CATEGORIES = `${API}/categories?per_page=100`;  //MAX: 100 categories can be fetched.
+
+
