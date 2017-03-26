@@ -43,15 +43,11 @@ export default class Header extends Component {
 	       		backgroundColor: purple, 
 	       		flexDirection: 'row'
 	       	}}>
-	            <TouchableOpacity onPress={() => this.close()}>
 	                <View style={{
 	                	height: headerHeight, 
 	                	width: headerHeight, 
 	                	justifyContent: 'center'
-	                }}>                 
-	                    <Icon style={{textAlign: 'center'}} size={22} name="menu" color="#fff"/>            
-	                </View>
-	            </TouchableOpacity>
+	                }}/>
 	            <View style={{
 	            	height: headerHeight, 
 	            	width: width - (3 * headerHeight), 
@@ -66,4 +62,14 @@ export default class Header extends Component {
 		);
 	}
 }
+
+/*<TouchableOpacity onPress={() => this.close()}>
+    <View style={{
+    	height: headerHeight, 
+    	width: headerHeight, 
+    	justifyContent: 'center'
+    }}>                 
+        <Icon style={{textAlign: 'center'}} size={22} name="menu" color="#fff"/>            
+    </View>
+</TouchableOpacity>*/
 

@@ -3,7 +3,9 @@ import { connect } from 'react-redux';
 import { Animated, View, StyleSheet, Dimensions } from 'react-native';
 import { TabViewAnimated, TabBarTop } from 'react-native-tab-view';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import Screens from './Screens';
+import Tags from './Tags';
+import Recent from './Recent';
+import Categories from './Categories';
 import { purple } from '../constants/color';
 import { fetchCategories, fetchPosts, fetchTags } from '../actions';
 import { topNotificationAreaHeight, getScreenHeight } from '../constants/dimens';
@@ -12,7 +14,7 @@ const height = getScreenHeight();
 const { width } = Dimensions.get('window');
 const AnimatedIcon = Animated.createAnimatedComponent(Ionicons);
 
-class Home extends Component {
+export default class Home extends Component {
   static title = 'Scroll views';
   static backgroundColor = '#fff';
   static tintColor = '#222';
@@ -109,11 +111,11 @@ class Home extends Component {
   _renderScene = ({ route }) => {
     switch (route.key) {
     case '1':
-      return <Screens navigator={this.props.navigator}/>;
+      return <Recent navigator={this.props.navigator} dispatch={this.props.dispatch}/>;
     case '2':
-      return <Screens/>;
+      return <Categories navigator={this.props.navigator} dispatch={this.props.dispatch}/>;
     case '3':
-      return <Screens/>;
+      return <Tags navigator={this.props.navigator} dispatch={this.props.dispatch}/>;
     default:
       return null;
     }
@@ -121,11 +123,10 @@ class Home extends Component {
 
   componentWillMount() {
     const { dispatch } = this.props;
-    dispatch(fetchCategories());
+    dispatch(fetchCategories()).then(dispatch(fetchTags()));
   }
 
   render() {
-    console.log(this.props);
     return (
       <TabViewAnimated
         style={[ styles.container, this.props.style ]}
@@ -137,13 +138,6 @@ class Home extends Component {
     );
   }
 }
-
-function mapStateToProps(state) {
-  const { categories } = state;
-  return { categories };
-}
-
-export default connect(mapStateToProps)(Home);
 
 const styles = StyleSheet.create({
   container: {

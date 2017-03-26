@@ -1,6 +1,6 @@
 import { Platform, Dimensions } from 'react-native';
 
-const { width, height } = Dimensions.get('window');
+export const { width, height } = Dimensions.get('window');
 export const topNotificationAreaHeight = Platform.OS === 'ios' ? 20 : 0;
 const androidStatusBarHeight = 24;
 
