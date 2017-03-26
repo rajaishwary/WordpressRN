@@ -29,6 +29,6 @@ const styles = StyleSheet.create({
         width,
         top: topNotificationAreaHeight,
         position: 'absolute',
-        backgroundColor: purple,  
+        backgroundColor: 'transparent',  
     },
 });
