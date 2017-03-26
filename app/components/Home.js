@@ -109,7 +109,7 @@ class Home extends Component {
   _renderScene = ({ route }) => {
     switch (route.key) {
     case '1':
-      return <Screens/>;
+      return <Screens navigator={this.props.navigator}/>;
     case '2':
       return <Screens/>;
     case '3':

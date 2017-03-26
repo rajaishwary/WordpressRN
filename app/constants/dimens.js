@@ -6,6 +6,7 @@ const androidStatusBarHeight = 24;
 
 export const tabBarHeight = 50 + (2 * 8)  // margin 8
 export const heightWOtabBar = getScreenHeight() - tabBarHeight;
+export const headerHeight = getHeaderHeight();
 
 export function getScreenHeight() {
 	const androidScreenHeight = height - topNotificationAreaHeight - androidStatusBarHeight;
