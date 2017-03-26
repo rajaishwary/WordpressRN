@@ -8,7 +8,7 @@ import {
 import { connect } from 'react-redux';
 import TabBarContainer from '../common/TabBarContainer';
 import Header from '../common/Header';
-import { purple } from '../constants/color';
+import { purple, tilePurple } from '../constants/color';
 import { BLOG_NAME } from '../constants/config';
 import { topNotificationAreaHeight, heightWOtabBar, headerHeight, width } from '../constants/dimens';
 
@@ -42,15 +42,13 @@ class Categories extends Component {
     }
 
     render() {
-    	console.log(this.props);
         const { navigator } = this.props;
-        // const { requestingCategories } = this.state;
         return (
             <TabBarContainer>
                 <Header name={'Categories'}/>
                 <View style={{top: headerHeight, width, height: heightWOtabBar - headerHeight}}>
 	                	<ScrollView>
-	                	  <View style={{alignItems: 'flex-start', flexDirection: 'row', flexWrap: 'wrap'}}>
+	                	  <View style={{alignItems: 'flex-start', flexDirection: 'row', flexWrap: 'wrap', margin: 5}}>
                             {this.renderCategories()}
 	                	  </View>
 	                	</ScrollView>
@@ -69,9 +67,16 @@ export default connect(mapStateToProps)(Categories);
 
 const styles = StyleSheet.create({
   cardContainer: {
-  	height: width / 2,
-    width: width / 2,
-    backgroundColor: 'gray',
-    justifyContent: 'center'
+  	height: (width / 2) - 15,
+    width: (width / 2) - 15,
+    backgroundColor: tilePurple,
+    justifyContent: 'center',
+    margin: 5,
+    borderRadius: 3,
+    shadowColor: 'gray',
+    shadowOffset: { height: 2, width: 2 },
+    shadowOpacity: 0.3,
+    shadowRadius: 4,
+    elevation: 5,
   }
 });
