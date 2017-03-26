@@ -8,12 +8,6 @@ import {
 } from 'react-native';
 import Home from './Home';
 
-const defaultRoute = {
-  name: 'Home',
-  component: Home,
-  passProps: {},
-};
-
 export default class Root extends Component {
 
   configureScene(route) {
@@ -31,6 +25,11 @@ export default class Root extends Component {
     }
 
     render() {
+        const defaultRoute = {
+          name: 'Home',
+          component: Home,
+          passProps: { dispatch: this.props.dispatch },
+        };
         return (
             <Navigator
                 renderScene={this.renderScene.bind(this)}

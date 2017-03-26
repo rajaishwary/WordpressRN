@@ -1,6 +1,6 @@
 import { RECEIVE_CATEGORIES } from '../actions';
 
-export default function getPosts(state = {
+export default function getCategories(state = {
    requestingCategories: true,
 }, action) {
   switch (action.type) {
