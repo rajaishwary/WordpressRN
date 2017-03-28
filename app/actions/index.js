@@ -9,7 +9,6 @@ export const RECEIVE_CATEGORIES = 'RECEIVE_CATEGORIES';
 export const RECEIVE_POSTS = 'RECEIVE_POSTS';
 export const RECEIVE_TAGS = 'RECEIVE_TAGS';
 
-
 export function fetchCategories() {
     return (dispatch, getState) => {
         return getFetch(`${GET_CATEGORIES}`)
