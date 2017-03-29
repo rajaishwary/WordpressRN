@@ -5,7 +5,8 @@ import {
     Text, 
     View,
     Dimensions,
-    StyleSheet
+    StyleSheet,
+    TouchableOpacity
 } from 'react-native';
 import { connect } from 'react-redux';
 import TabBarContainer from '../common/TabBarContainer';
@@ -14,13 +15,16 @@ import { purple } from '../constants/color';
 import { fetchPosts } from '../actions';
 import { BLOG_NAME } from '../constants/config';
 import { topNotificationAreaHeight, heightWOtabBar, headerHeight } from '../constants/dimens';
-export const { width, height } = Dimensions.get('window');
+import PostDetail from './PostDetail';
+
+const { width, height } = Dimensions.get('window');
 
 class Recent extends Component {
 	constructor(props) {
 		super(props);
 		this.fetchNextPosts = this.fetchNextPosts.bind(this);
 		this.renderCard = this.renderCard.bind(this);
+		this.onPressPostCard = this.onPressPostCard.bind(this);
 		this.ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
 		this.newData=[];
 		this.counter= 1;
@@ -49,12 +53,24 @@ class Recent extends Component {
 	    this.counter += 1;
 	}
 
+	onPressPostCard(data) {
+	   const { navigator } = this.props;
+	   const post = {
+	   	   name: 'PostDetail',
+	   	   component: PostDetail,
+	   	   passProps: { post: data }
+	   }
+	   navigator.push(post);
+	}
+
 	renderCard(data, id) {
 		return (
+			<TouchableOpacity onPress={() => this.onPressPostCard(data)}>
 			<View style={styles.container} key={id}>
 				<Text style={styles.postsView}>Image</Text>
 				<Text>{data.title.rendered}</Text>
 			</View>
+			</TouchableOpacity>
 		);
 	}
 
