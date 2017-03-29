@@ -4,7 +4,8 @@ import {
     ListView, 
     Text, 
     View,
-    Dimensions
+    Dimensions,
+    StyleSheet
 } from 'react-native';
 import { connect } from 'react-redux';
 import TabBarContainer from '../common/TabBarContainer';
@@ -19,6 +20,7 @@ class Recent extends Component {
 	constructor(props) {
 		super(props);
 		this.fetchNextPosts = this.fetchNextPosts.bind(this);
+		this.renderCard = this.renderCard.bind(this);
 		this.ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
 		this.newData=[];
 		this.counter= 1;
@@ -47,19 +49,26 @@ class Recent extends Component {
 	    this.counter += 1;
 	}
 
+	renderCard(data, id) {
+		return (
+			<View style={styles.container} key={id}>
+				<Text style={styles.postsView}>Image</Text>
+				<Text>{data.title.rendered}</Text>
+			</View>
+		);
+	}
+
     render() {
         const { navigator } = this.props;
         return (
             <TabBarContainer>
                 <Header name={BLOG_NAME}/>
-                <View style={{flex: 1, top: headerHeight, height, width}}>
+                <View style={{flex: 1, top: headerHeight, height: heightWOtabBar - headerHeight, width}}>
+                	<Text>Recent Posts</Text>
 			        <View style={{flex: 1}}>
 			        <ListView
 			          dataSource={this.state.dataSource}
-			          renderRow={(rowData, id) => (<View key={id}>
-			          	<Text>{rowData.date}</Text>
-			        
-			          	</View>)}
+			          renderRow={(rowData, id) => this.renderCard(rowData, id)}
 			          enableEmptySections={true}
 			          onEndReached={this.fetchNextPosts}
 			        />
@@ -76,4 +85,19 @@ function mapStateToProps(state) {
 }
 
 export default connect(mapStateToProps)(Recent);
+
+const styles = StyleSheet.create({
+	container: {
+		justifyContent : 'center',
+		alignItems: 'center',
+		height : height * 0.25,
+	 	borderWidth: 1,
+	 	margin: 15,
+	},
+	postsView: {
+		justifyContent : 'center',
+		alignItems: 'center',
+		height: height * 0.15,
+	}
+});
 
