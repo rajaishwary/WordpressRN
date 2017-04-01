@@ -24,7 +24,7 @@ class Categories extends Component {
 
 	componentWillReceiveProps(nextProps) {
 		const { data, requestingCategories } = nextProps.categories;
-		this.setState({requestingCategories, categories: data});
+		this.setState({requestingCategories, categories: data.categories});
 	}
 
     renderCategories() {
@@ -32,10 +32,10 @@ class Categories extends Component {
             return (
                 <View><Text>Getting data</Text></View>
             );
-        } else {
+        } else { 
             return this.state.categories.map((category, id) => (
                 <View key={id} style={styles.cardContainer}>
-                    <Text style={{textAlign: 'center', fontWeight: '600', fontSize: 18}}>{category.name}</Text>
+                    <Text style={{textAlign: 'center', fontWeight: '600', fontSize: 18}}>{category.title}</Text>
                 </View>
             ));
         }

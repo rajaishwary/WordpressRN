@@ -43,7 +43,7 @@ class Recent extends Component {
   	componentWillReceiveProps(nextProps) {
   		console.log(nextProps)
 		const { data, requestingPosts } = nextProps.posts;
-		this.newData = this.newData.concat(data);
+		this.newData = this.newData.concat(data.posts);
 		this.setState({requestingPosts, dataSource: this.ds.cloneWithRows(this.newData)});
 	}
 
@@ -68,18 +68,21 @@ class Recent extends Component {
 			<TouchableOpacity onPress={() => this.onPressPostCard(data)}>
 			<View style={styles.container} key={id}>
 				<Text style={styles.postsView}>Image</Text>
-				<Text>{data.title.rendered}</Text>
+				<Text>{data.title}</Text>
 			</View>
 			</TouchableOpacity>
 		);
 	}
 
+
+
     render() {
         const { navigator } = this.props;
+        console.log(this.props);
         return (
             <TabBarContainer>
                 <Header name={BLOG_NAME}/>
-                <View style={{flex: 1, top: headerHeight, height: heightWOtabBar - headerHeight, width}}>
+                	<View style={{flex: 1, top: headerHeight, height: heightWOtabBar - headerHeight, width}}>
                 	<Text>Recent Posts</Text>
 			        <View style={{flex: 1}}>
 			        <ListView

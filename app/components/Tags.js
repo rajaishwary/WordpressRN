@@ -24,7 +24,7 @@ class Tags extends Component {
 
 	componentWillReceiveProps(nextProps) {
 		const { data, requestingTags } = nextProps.tags;
-		this.setState({requestingTags, tags: data});
+		this.setState({requestingTags, tags: data.tags});
 	}
 
     renderTags() {
@@ -35,7 +35,7 @@ class Tags extends Component {
         } else {
             return this.state.tags.map((tag, id) => (
                 <View key={id} style={styles.cardContainer}>
-                    <Text style={{textAlign: 'center', fontWeight: '600', fontSize: 18, padding: 5}}>#{tag.name}</Text>
+                    <Text style={{textAlign: 'center', fontWeight: '600', fontSize: 18, padding: 5}}>#{tag.title}</Text>
                 </View>
             ));
         }
@@ -43,6 +43,7 @@ class Tags extends Component {
 
     render() {
         const { navigator } = this.props;
+        console.log(this.props);
         return (
             <TabBarContainer>
                 <Header name={'Popular Tags'}/>
