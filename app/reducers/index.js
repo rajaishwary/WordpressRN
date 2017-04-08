@@ -3,12 +3,14 @@ import posts from './posts';
 import categories from './categories';
 import tags from './tags';
 import recent from './recent';
+import categorisedPosts from './categorisedPosts';
 
 const rootReducer = combineReducers({
     posts,
     categories,
     tags,
-    recent
+    recent,
+    categorisedPosts,
 });
 
 export default rootReducer;

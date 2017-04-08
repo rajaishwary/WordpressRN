@@ -14,9 +14,9 @@ import { connect } from 'react-redux';
 import TabBarContainer from '../common/TabBarContainer';
 import Header from '../common/Header';
 import { purple } from '../constants/color';
-import { fetchPosts } from '../actions';
+import { fetchCatPosts } from '../actions';
 import { BLOG_NAME } from '../constants/config';
-import { topNotificationAreaHeight, heightWOtabBar, headerHeight } from '../constants/dimens';
+import { topNotificationAreaHeight, heightWOtabBar, headerHeight, screenHeight } from '../constants/dimens';
 import PostDetail from './PostDetail';
 
 const { width, height } = Dimensions.get('window');
@@ -25,7 +25,7 @@ const HScrollViewHeight = width / 2;
 const MARGIN = width * 0.025;
 const cardWidth = width - (2 * MARGIN);
 
-class Recent extends Component {
+class CategorisedPosts extends Component {
 	constructor(props) {
 		super(props);
 		this.fetchNextPosts = this.fetchNextPosts.bind(this);
@@ -35,27 +35,27 @@ class Recent extends Component {
 		this.newData=[];
 		this.counter= 1;
 	    this.state = {
-	       requestingPosts: true,
+	       requestingCatPosts: true,
 	       dataSource: this.ds.cloneWithRows([]),
 	    };
 	}
 
 	componentWillMount() {
-	    const { dispatch } = this.props;
-	    dispatch(fetchPosts(this.counter));
+	    const { dispatch, category } = this.props;
+	    dispatch(fetchCatPosts(category.slug, this.counter));
 	    this.counter += 1;
   	}
 
   	componentWillReceiveProps(nextProps) {
   		console.log(nextProps)
-		const { data, requestingPosts } = nextProps.posts;
+		const { data, requestingCatPosts } = nextProps.categorisedPosts;
 		this.newData = this.newData.concat(data.posts);
-		this.setState({requestingPosts, dataSource: this.ds.cloneWithRows(this.newData)});
+		this.setState({requestingCatPosts, dataSource: this.ds.cloneWithRows(this.newData)});
 	}
 
 	fetchNextPosts() {
-		const { dispatch } = this.props;
-	    dispatch(fetchPosts(this.counter));
+		const { dispatch, category } = this.props;
+	    dispatch(fetchCatPosts(category.slug, this.counter));
 	    this.counter += 1;
 	}
 
@@ -89,36 +89,57 @@ class Recent extends Component {
 
 
     render() {
-        const { navigator } = this.props;
+        const { navigator, category } = this.props;
         return (
-            <TabBarContainer>
-                <Header name={BLOG_NAME}/>
-					<View style={styles.viewContainer}>
-							<View style={{height: titleContainerHeight, width: width, justifyContent: 'center'}}>
-								<Text style={{left: width * 0.05, color: '#000', fontSize: 18, fontWeight: '600'}}>Recent Posts</Text>
-							</View>
-							<View style={{flex: 1}}>
-								<ListView
-									dataSource={this.state.dataSource}
-									renderRow={(rowData, id) => this.renderCard(rowData, id)}
-									enableEmptySections={true}
-									onEndReached={this.fetchNextPosts}
-								/>
-							</View>
-						</View>
-            </TabBarContainer>
+            <View style={styles.container}>
+                <View style={styles.headerView}>
+		       		<TouchableOpacity onPress={() => this.props.navigator.pop()}>
+		                <View style={styles.closeButton}>
+		                	<Text style={{color: '#fff'}}>X</Text>
+		                </View>
+		            </TouchableOpacity>
+		            <View style={{
+		            	height: headerHeight, 
+		            	width: width - (2 * headerHeight) , 
+		            	backgroundColor: 'transparent', 
+		            	justifyContent: 'center'
+		            	}}>
+	                   <Text style={{left: MARGIN / 2, textAlign: 'center', color: 'white', fontWeight: '600', fontSize: 20}}>Post</Text>
+		            </View>
+		        </View>
+		        <View style={styles.viewContainer}>
+					<View style={{height: titleContainerHeight, width: width, justifyContent: 'center'}}>
+						<Text style={{left: width * 0.05, color: '#000', fontSize: 18, fontWeight: '600'}}>{`${category.title} posts`}</Text>
+					</View>
+					<View style={{flex: 1}}>
+						<ListView
+							dataSource={this.state.dataSource}
+							renderRow={(rowData, id) => this.renderCard(rowData, id)}
+							enableEmptySections={true}
+							onEndReached={this.fetchNextPosts}
+						/>
+					</View>
+				</View>
+            </View>
         );
     }
 }
 
 function mapStateToProps(state) {
-  const { posts } = state;
-  return { posts };
+  const { categorisedPosts } = state;
+  return { categorisedPosts };
 }
 
-export default connect(mapStateToProps)(Recent);
+export default connect(mapStateToProps)(CategorisedPosts);
 
 const styles = StyleSheet.create({
+	container: {
+        height: screenHeight,
+        width,
+        top: topNotificationAreaHeight,
+        position: 'absolute',
+        backgroundColor: 'transparent',  
+    },
 	viewContainer: {
 	    position: 'absolute', 
 	    top: headerHeight,
@@ -145,5 +166,19 @@ const styles = StyleSheet.create({
 	    shadowRadius: 4,
 	    elevation: 5
 	  },
+	headerView: {
+   		position: 'absolute', 
+   		top: 0, 
+   		width: width, 
+   		height: headerHeight, 
+   		backgroundColor: purple, 
+   		flexDirection: 'row'
+   	},
+   	closeButton: {
+		height: headerHeight, 
+		width: headerHeight, 
+		justifyContent: 'center',
+		alignItems: 'center'
+	}
 });
 

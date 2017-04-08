@@ -3,6 +3,7 @@ import {
     GET_POSTS,
     GET_TAGS,
     GET_RECENT_POSTS,
+    GET_CAT_POSTS,
 } from '../constants/API';
 import { getFetch, postFetch, deleteFetch } from '../utils/APIutils';
 
@@ -10,6 +11,8 @@ export const RECEIVE_CATEGORIES = 'RECEIVE_CATEGORIES';
 export const RECEIVE_POSTS = 'RECEIVE_POSTS';
 export const RECEIVE_TAGS = 'RECEIVE_TAGS';
 export const RECEIVE_RECENT_POSTS = 'RECEIVE_RECENT_POSTS';
+export const RECEIVE_CAT_POSTS = 'RECEIVE_CAT_POSTS';
+
 
 export function fetchCategories() {
     return (dispatch, getState) => {
@@ -29,6 +32,18 @@ export function fetchPosts(pageId) {
         return getFetch(`${GET_POSTS}?page=${pageId}`)
             .then(response => { 
                     dispatch(receivePosts(response));
+                })
+                .catch(err => {
+                    console.log(err);
+                });
+            }
+    };  
+
+export function fetchCatPosts(slug, pageId) {
+    return (dispatch, getState) => {
+        return getFetch(`${GET_CAT_POSTS}?slug=${slug}&page=${pageId}`)
+            .then(response => { 
+                    dispatch(receiveCatPosts(response));
                 })
                 .catch(err => {
                     console.log(err);
@@ -73,6 +88,13 @@ export function receivePosts(data) {
         data,
     }
 }   
+
+export function receiveCatPosts(data) {
+    return {
+        type: RECEIVE_CAT_POSTS,
+        data,
+    }
+}  
 
 export function receiveTags(data) {
     return {
