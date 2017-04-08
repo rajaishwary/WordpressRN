@@ -6,7 +6,8 @@ import {
     View,
     Dimensions,
     StyleSheet,
-    TouchableOpacity
+    TouchableOpacity,
+    ScrollView
 } from 'react-native';
 import { connect } from 'react-redux';
 import TabBarContainer from '../common/TabBarContainer';
@@ -18,6 +19,8 @@ import { topNotificationAreaHeight, heightWOtabBar, headerHeight } from '../cons
 import PostDetail from './PostDetail';
 
 const { width, height } = Dimensions.get('window');
+const titleContainerHeight = width / 10;
+const HScrollViewHeight = width / 2;
 
 class Recent extends Component {
 	constructor(props) {
@@ -82,17 +85,19 @@ class Recent extends Component {
         return (
             <TabBarContainer>
                 <Header name={BLOG_NAME}/>
-                	<View style={{flex: 1, top: headerHeight, height: heightWOtabBar - headerHeight, width}}>
-                	<Text>Recent Posts</Text>
-			        <View style={{flex: 1}}>
-			        <ListView
-			          dataSource={this.state.dataSource}
-			          renderRow={(rowData, id) => this.renderCard(rowData, id)}
-			          enableEmptySections={true}
-			          onEndReached={this.fetchNextPosts}
-			        />
-			        </View>
-			      </View>
+					<View style={{top: headerHeight, height: heightWOtabBar - headerHeight, width}}>
+							<View style={{height: titleContainerHeight, width: width, backgroundColor: 'gray'}}>
+								<Text>Recent Posts</Text>
+							</View>
+							<View style={{flex: 1}}>
+								<ListView
+									dataSource={this.state.dataSource}
+									renderRow={(rowData, id) => this.renderCard(rowData, id)}
+									enableEmptySections={true}
+									onEndReached={this.fetchNextPosts}
+								/>
+							</View>
+						</View>
             </TabBarContainer>
         );
     }

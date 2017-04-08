@@ -43,7 +43,7 @@ class Tags extends Component {
 
     render() {
         const { navigator } = this.props;
-        console.log(this.props);
+        console.log(this.state);
         return (
             <TabBarContainer>
                 <Header name={'Popular Tags'}/>
