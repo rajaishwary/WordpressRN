@@ -7,7 +7,8 @@ import {
     Dimensions,
     StyleSheet,
     TouchableOpacity,
-    ScrollView
+    ScrollView,
+    Image
 } from 'react-native';
 import { connect } from 'react-redux';
 import TabBarContainer from '../common/TabBarContainer';
@@ -21,6 +22,8 @@ import PostDetail from './PostDetail';
 const { width, height } = Dimensions.get('window');
 const titleContainerHeight = width / 10;
 const HScrollViewHeight = width / 2;
+const MARGIN = width * 0.025;
+const cardWidth = width - (2 * MARGIN);
 
 class Recent extends Component {
 	constructor(props) {
@@ -69,9 +72,15 @@ class Recent extends Component {
 	renderCard(data, id) {
 		return (
 			<TouchableOpacity onPress={() => this.onPressPostCard(data)}>
-			<View style={styles.container} key={id}>
-				<Text style={styles.postsView}>Image</Text>
-				<Text>{data.title}</Text>
+			<View style={styles.cardContainer} key={id}>
+			    {data && data.attachments[0] && data.attachments[0].url ? (
+			    	<Image style={{width: cardWidth, height: height * 0.25}} source={{uri: data && data.attachments[0] && data.attachments[0].url}}/>
+			    ) : (<View
+			    	style={{width: cardWidth, height: height * 0.20, backgroundColor: '#e4e4e4', justifyContent: 'center', alignItems: 'center'}} 
+			    ><Text style={{fontSize: 22, fontWeight: '400'}}>{BLOG_NAME}</Text></View>)}
+				<View style={{width: cardWidth, height: height * 0.05, backgroundColor: '#e4e4e4', justifyContent: 'center'}} >
+				  <Text ellipsizeMode={'tail'} numberOfLines={1}  style={{padding: MARGIN, fontSize: 18, fontWeight: '400'}}>{data.title}</Text>
+				</View>
 			</View>
 			</TouchableOpacity>
 		);
@@ -85,9 +94,9 @@ class Recent extends Component {
         return (
             <TabBarContainer>
                 <Header name={BLOG_NAME}/>
-					<View style={{top: headerHeight, height: heightWOtabBar - headerHeight, width}}>
-							<View style={{height: titleContainerHeight, width: width, backgroundColor: 'gray'}}>
-								<Text>Recent Posts</Text>
+					<View style={styles.viewContainer}>
+							<View style={{height: titleContainerHeight, width: width, justifyContent: 'center'}}>
+								<Text style={{left: width * 0.05, color: '#000', fontSize: 18, fontWeight: '600'}}>Recent Posts</Text>
 							</View>
 							<View style={{flex: 1}}>
 								<ListView
@@ -111,17 +120,31 @@ function mapStateToProps(state) {
 export default connect(mapStateToProps)(Recent);
 
 const styles = StyleSheet.create({
-	container: {
-		justifyContent : 'center',
-		alignItems: 'center',
-		height : height * 0.25,
-	 	borderWidth: 1,
-	 	margin: 15,
-	},
+	viewContainer: {
+	    position: 'absolute', 
+	    top: headerHeight,
+	    width: width, 
+	    height: height - headerHeight, 
+	  },
 	postsView: {
 		justifyContent : 'center',
 		alignItems: 'center',
 		height: height * 0.15,
-	}
+	},
+	cardContainer: {
+	    marginLeft: MARGIN,
+	    marginBottom: MARGIN,
+	    marginRight: MARGIN,
+	    marginTop: MARGIN,
+	    width: cardWidth,
+	    backgroundColor: 'white',
+	    flexWrap: 'wrap', 
+	    alignItems: 'flex-start',
+	    shadowColor: 'gray',
+	    shadowOffset: { height: 2, width: 2 },
+	    shadowOpacity: 0.3,
+	    shadowRadius: 4,
+	    elevation: 5
+	  },
 });
 
