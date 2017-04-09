@@ -11,7 +11,9 @@ import {
     Image
 } from 'react-native';
 import { connect } from 'react-redux';
+import Icon from 'react-native-vector-icons/Ionicons';
 import TabBarContainer from '../common/TabBarContainer';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 import Header from '../common/Header';
 import { purple } from '../constants/color';
 import { fetchCatPosts } from '../actions';
@@ -86,8 +88,6 @@ class CategorisedPosts extends Component {
 		);
 	}
 
-
-
     render() {
         const { navigator, category } = this.props;
         return (
@@ -95,7 +95,7 @@ class CategorisedPosts extends Component {
                 <View style={styles.headerView}>
 		       		<TouchableOpacity onPress={() => this.props.navigator.pop()}>
 		                <View style={styles.closeButton}>
-		                	<Text style={{color: '#fff'}}>X</Text>
+		                	<Icon name="ios-arrow-back" size={22} color="#fff" />
 		                </View>
 		            </TouchableOpacity>
 		            <View style={{
@@ -138,7 +138,7 @@ const styles = StyleSheet.create({
         width,
         top: topNotificationAreaHeight,
         position: 'absolute',
-        backgroundColor: 'transparent',  
+        backgroundColor: 'white',  
     },
 	viewContainer: {
 	    position: 'absolute', 

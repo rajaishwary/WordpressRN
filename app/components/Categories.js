@@ -49,7 +49,7 @@ class Categories extends Component {
             return this.state.categories.map((category, id) => (
               <TouchableOpacity key={id} onPress={() => this.onCategoryPress(category)}> 
                 <View style={styles.cardContainer}>
-                    <Text style={{textAlign: 'center', fontWeight: '600', fontSize: 18}}>{category.title}</Text>
+                    <Text style={{textAlign: 'center', fontWeight: '600', fontSize: 18, color: 'white'}}>{category.title}</Text>
                 </View>
               </TouchableOpacity> 
             ));
@@ -84,7 +84,7 @@ const styles = StyleSheet.create({
   cardContainer: {
   	height: (width / 2) - 15,
     width: (width / 2) - 15,
-    backgroundColor: tilePurple,
+    backgroundColor: '#474747',
     justifyContent: 'center',
     margin: 5,
     shadowColor: 'gray',

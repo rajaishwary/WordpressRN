@@ -1,3 +1,3 @@
-export const purple = '#885EAD';
+export const purple = '#0d0d0d';
 
-export const tilePurple = '#CCBADC';
+export const tile = '#c1c1c1';

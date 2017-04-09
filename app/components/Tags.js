@@ -8,7 +8,7 @@ import {
 import { connect } from 'react-redux';
 import TabBarContainer from '../common/TabBarContainer';
 import Header from '../common/Header';
-import { purple, tilePurple } from '../constants/color';
+import { purple, tile } from '../constants/color';
 import { BLOG_NAME } from '../constants/config';
 import { topNotificationAreaHeight, heightWOtabBar, headerHeight, width } from '../constants/dimens';
 
@@ -67,7 +67,7 @@ export default connect(mapStateToProps)(Tags);
 
 const styles = StyleSheet.create({
   cardContainer: {
-    backgroundColor: tilePurple,
+    backgroundColor: tile,
     justifyContent: 'center',
     margin: 5,
     borderRadius: 5,

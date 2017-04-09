@@ -7,7 +7,8 @@ import {
     StyleSheet,
     ScrollView
 } from 'react-native';
-import HTML from 'react-native-fence-html'
+import HTML from 'react-native-fence-html';
+import Icon from 'react-native-vector-icons/Ionicons';
 import TabBarContainer from '../common/TabBarContainer';
 import Header from '../common/Header';
 import BackgroundImage from '../common/BackgroundImage';
@@ -30,7 +31,7 @@ export default class PostDetail extends Component {
                 <View style={styles.headerView}>
 		       		<TouchableOpacity onPress={() => this.props.navigator.pop()}>
 		                <View style={styles.closeButton}>
-		                	<Text style={{color: '#fff'}}>X</Text>
+		                	<Icon name="ios-arrow-back" size={22} color="#fff" />
 		                </View>
 		            </TouchableOpacity>
 		            <View style={{
