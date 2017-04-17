@@ -6,7 +6,7 @@ import {
     View,
     Dimensions,
     StyleSheet,
-    TouchableOpacity,
+    TouchableWithoutFeedback,
     ScrollView,
     Image
 } from 'react-native';
@@ -18,6 +18,7 @@ import { fetchPosts } from '../actions';
 import { BLOG_NAME } from '../constants/config';
 import { topNotificationAreaHeight, heightWOtabBar, headerHeight } from '../constants/dimens';
 import PostDetail from './PostDetail';
+import SplashScreen from '@remobile/react-native-splashscreen';
 
 const { width, height } = Dimensions.get('window');
 const titleContainerHeight = width / 10;
@@ -47,6 +48,7 @@ class Recent extends Component {
   	}
 
   	componentWillReceiveProps(nextProps) {
+  		SplashScreen.hide();
   		console.log(nextProps)
 		const { data, requestingPosts } = nextProps.posts;
 		this.newData = this.newData.concat(data.posts);
@@ -71,7 +73,7 @@ class Recent extends Component {
 
 	renderCard(data, id) {
 		return (
-			<TouchableOpacity onPress={() => this.onPressPostCard(data)}>
+			<TouchableWithoutFeedback onPress={() => this.onPressPostCard(data)}>
 			<View style={styles.cardContainer} key={id}>
 			    {data && data.attachments[0] && data.attachments[0].url ? (
 			    	<Image style={{width: cardWidth, height: height * 0.25}} source={{uri: data && data.attachments[0] && data.attachments[0].url}}/>
@@ -82,7 +84,7 @@ class Recent extends Component {
 				  <Text ellipsizeMode={'tail'} numberOfLines={1}  style={{padding: MARGIN, fontSize: 18, fontWeight: '400'}}>{data.title}</Text>
 				</View>
 			</View>
-			</TouchableOpacity>
+			</TouchableWithoutFeedback>
 		);
 	}
 
