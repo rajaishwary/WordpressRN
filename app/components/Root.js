@@ -6,7 +6,7 @@ import {
     Navigator,
     TouchableHighlight,
 } from 'react-native';
-import Home from './Home';
+import HomeNoAnimate from './HomeNoAnimate';
 
 export default class Root extends Component {
 
@@ -26,8 +26,8 @@ export default class Root extends Component {
 
     render() {
         const defaultRoute = {
-          name: 'Home',
-          component: Home,
+          name: 'HomeNoAnimate',
+          component: HomeNoAnimate,
           passProps: { dispatch: this.props.dispatch },
         };
         return (
