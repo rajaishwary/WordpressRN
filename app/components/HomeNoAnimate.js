@@ -44,9 +44,9 @@ export default class HomeNoAnimate extends PureComponent<void, *, State> {
   state: State = {
     index: 0,
     routes: [
-      { key: '1', title: 'RECENT', icon: 'ios-star' },
-      { key: '2', title: 'CATEGORIES', icon: 'ios-albums' },
-      { key: '3', title: 'TAGS', icon: 'ios-navigate' },
+      { key: '1', title: 'RECENT', icon: 'ios-bookmarks' },
+      { key: '2', title: 'CATEGORIES', icon: 'ios-keypad' },
+      { key: '3', title: 'TAGS', icon: 'ios-list-box' },
     ],
   };
 
@@ -134,11 +134,6 @@ export default class HomeNoAnimate extends PureComponent<void, *, State> {
     }
   };
 
-  componentWillMount() {
-    const { dispatch } = this.props;
-    dispatch(fetchCategories()).then(dispatch(fetchTags()));
-  }
-
   render() {
     return (
       <Container>
@@ -162,7 +157,6 @@ const styles = StyleSheet.create({
   container: {
     height: screenHeight,
     width,
-    backgroundColor: 'blue'
   },
   tabbar: {
     height: 66,

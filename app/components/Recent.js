@@ -11,17 +11,16 @@ import {
     Image
 } from 'react-native';
 import { connect } from 'react-redux';
-
-
 import { purple } from '../constants/color';
 import { fetchPosts } from '../actions';
 import { BLOG_NAME } from '../constants/config';
-import { topNotificationAreaHeight, heightWOtabBar, headerHeight } from '../constants/dimens';
+import { topNotificationAreaHeight, heightWOtabBar, headerHeight, screenHeight } from '../constants/dimens';
 import PostDetail from './PostDetail';
 import SplashScreen from '@remobile/react-native-splashscreen';
 import DrawerLayout from 'react-native-drawer-layout';
 
-const { width, height } = Dimensions.get('window');
+const height = heightWOtabBar - headerHeight;
+const { width } = Dimensions.get('window');
 const titleContainerHeight = width / 10;
 const HScrollViewHeight = width / 2;
 const MARGIN = width * 0.025;
@@ -50,7 +49,6 @@ class Recent extends Component {
 
   	componentWillReceiveProps(nextProps) {
   		SplashScreen.hide();
-  		console.log(nextProps)
 		const { data, requestingPosts } = nextProps.posts;
 		this.newData = this.newData.concat(data.posts);
 		this.setState({requestingPosts, dataSource: this.ds.cloneWithRows(this.newData)});
@@ -73,15 +71,25 @@ class Recent extends Component {
 	}
 
 	renderCard(data, id) {
+		console.log(data);
 		return (
 			<TouchableWithoutFeedback onPress={() => this.onPressPostCard(data)}>
 			<View style={styles.cardContainer} key={id}>
 			    {data && data.attachments[0] && data.attachments[0].url ? (
-			    	<Image style={{width: cardWidth, height: height * 0.25}} source={{uri: data && data.attachments[0] && data.attachments[0].url}}/>
+			    	<View style={{width: width, height: height * 0.35}}>
+			    	  <Image style={{width: width, height: height * 0.35}} source={{uri: data && data.attachments[0] && data.attachments[0].url}}>
+			    	  	<Text style={{textAlign: 'center',color: 'white', alignSelf: 'flex-end',backgroundColor: 'red', fontWeight: '400', fontSize: 16, padding: 3, width: width / 3}}>{data.categories[0] && data.categories[0].title}</Text>
+			    	  </Image>
+			    	</View>
 			    ) : (<View
-			    	style={{width: cardWidth, height: height * 0.25, backgroundColor: '#e4e4e4', justifyContent: 'center', alignItems: 'center'}} 
-			    ><Text style={{fontSize: 22, fontWeight: '400'}}>{BLOG_NAME}</Text></View>)}
-				<View style={{width: cardWidth, height: height * 0.05, backgroundColor: '#f4f4f4', justifyContent: 'center'}} >
+			    	style={{width: width, height: height * 0.35, backgroundColor: '#e4e4e4', alignItems: 'center'}} 
+			    >
+				    <Text style={{textAlign: 'center', color: 'white', alignSelf: 'flex-end',backgroundColor: 'red', fontWeight: '400', fontSize: 16, padding: 3, width: width / 3}}>{data.categories[0] && data.categories[0].title}</Text>
+				    <View style={{flex: 1, justifyContent: 'center'}}>
+				    	<Text style={{fontSize: 36, fontWeight: '600'}}>{BLOG_NAME}</Text>
+					</View>
+				</View>)}
+				<View style={{width: width, height: height * 0.05, backgroundColor: '#f4f4f4', justifyContent: 'center'}} >
 				  <Text ellipsizeMode={'tail'} numberOfLines={1}  style={{padding: MARGIN, fontSize: 18, fontWeight: '400'}}>{data.title}</Text>
 				</View>
 			</View>
@@ -123,7 +131,7 @@ const styles = StyleSheet.create({
 	    position: 'absolute', 
 	    top: 0,
 	    width: width, 
-	    height: 500, 
+	    height, 
 	  },
 	postsView: {
 		justifyContent : 'center',
@@ -131,11 +139,9 @@ const styles = StyleSheet.create({
 		height: height * 0.15,
 	},
 	cardContainer: {
-	    marginLeft: MARGIN,
 	    marginBottom: MARGIN,
-	    marginRight: MARGIN,
 	    marginTop: MARGIN,
-	    width: cardWidth,
+	    width: width,
 	    backgroundColor: 'white',
 	    flexWrap: 'wrap', 
 	    alignItems: 'flex-start',

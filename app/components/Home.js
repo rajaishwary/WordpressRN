@@ -121,11 +121,6 @@ export default class Home extends Component {
     }
   };
 
-  componentWillMount() {
-    const { dispatch } = this.props;
-    dispatch(fetchCategories()).then(dispatch(fetchTags()));
-  }
-
   render() {
     return (
       <TabViewAnimated

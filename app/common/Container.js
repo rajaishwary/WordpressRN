@@ -28,6 +28,6 @@ const styles = StyleSheet.create({
         width,
         top: topNotificationAreaHeight,
         position: 'absolute',
-        backgroundColor: 'red',  
+        backgroundColor: 'white',  
     },
 });

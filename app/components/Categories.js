@@ -13,6 +13,7 @@ import { purple, tilePurple } from '../constants/color';
 import { BLOG_NAME } from '../constants/config';
 import { topNotificationAreaHeight, heightWOtabBar, headerHeight, width } from '../constants/dimens';
 import CategorisedPosts from './CategorisedPosts';
+import { fetchCategories, fetchPosts, fetchTags } from '../actions';
 
 class Categories extends Component {
 	constructor(props) {
@@ -24,6 +25,11 @@ class Categories extends Component {
 			categories: null,
 		};
 	}
+
+  componentWillMount() {
+    const { dispatch } = this.props;
+    dispatch(fetchCategories()).then(dispatch(fetchTags()));
+  }
 
 	componentWillReceiveProps(nextProps) {
 		const { data, requestingCategories } = nextProps.categories;
