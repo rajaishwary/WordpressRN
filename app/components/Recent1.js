@@ -94,22 +94,19 @@ class Recent extends Component {
     render() {
         const { navigator } = this.props;
         return (
-            <TabBarContainer>
-                <Header name={BLOG_NAME}/>
-					<View style={styles.viewContainer}>
-							<View style={{height: titleContainerHeight, width: width, justifyContent: 'center'}}>
-								<Text style={{left: width * 0.05, color: '#000', fontSize: 18, fontWeight: '600'}}>Recent Posts</Text>
-							</View>
-							<View style={{flex: 1}}>
-								<ListView
-									dataSource={this.state.dataSource}
-									renderRow={(rowData, id) => this.renderCard(rowData, id)}
-									enableEmptySections={true}
-									onEndReached={this.fetchNextPosts}
-								/>
-							</View>
-						</View>
-            </TabBarContainer>
+			<View style={styles.viewContainer}>
+				<View style={{height: titleContainerHeight, width: width, justifyContent: 'center'}}>
+					<Text style={{left: width * 0.05, color: '#000', fontSize: 18, fontWeight: '600'}}>Recent Posts</Text>
+				</View>
+				<View style={{flex: 1}}>
+					<ListView
+						dataSource={this.state.dataSource}
+						renderRow={(rowData, id) => this.renderCard(rowData, id)}
+						enableEmptySections={true}
+						onEndReached={this.fetchNextPosts}
+					/>
+				</View>
+			</View>
         );
     }
 }

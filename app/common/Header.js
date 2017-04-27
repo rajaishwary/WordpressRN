@@ -13,7 +13,7 @@ import {
 } from 'react-native';
 import Icon from 'react-native-vector-icons/SimpleLineIcons';
 import { 
-	getScreenHeight, 
+	screenHeight, 
 	tabBarHeight, 
 	headerHeight, 
 	heightWOtabBar, 
@@ -23,7 +23,7 @@ import { purple } from '../constants/color';
 import DrawerLayout from 'react-native-drawer-layout';
 
 const { width } = Dimensions.get('window');
-const height = getScreenHeight();
+const height = screenHeight - headerHeight;
 const margin = height / 30;
 
 var DrawerLockModeSwitches = React.createClass({
@@ -76,12 +76,13 @@ export default class Header extends Component {
 	    const navigationView = (
 	      <View style={[styles.container]}>
 	        <Text>Hello there!</Text>
-	        <DrawerLockModeSwitches value={drawerLockMode} onValueChange={value => this.setState({drawerLockMode: value})} />
 	        <TouchableHighlight onPress={() => this.drawer.closeDrawer()}>
 	          <Text>Close drawer</Text>
 	        </TouchableHighlight>
 	      </View>
 	    );
+
+	    const { children } = this.props;
 		return (
 	       		<DrawerLayout
 			        onDrawerSlide={(e) => this.setState({drawerSlideOutput: JSON.stringify(e.nativeEvent)})}
@@ -93,21 +94,20 @@ export default class Header extends Component {
 			        keyboardDismissMode="on-drag"
 			        statusBarBackgroundColor="blue"
 			        renderNavigationView={() => navigationView}>
-			       <View style={styles.container}>
 				       <View style={{
-				       		position: 'absolute', 
-				       		top: 0, 
 				       		width: width, 
 				       		height: headerHeight, 
 				       		backgroundColor: purple, 
 				       		flexDirection: 'row'
 				       	}}>
-					       
-					    <View style={{
-		                	height: headerHeight, 
-		                	width: headerHeight, 
-		                	justifyContent: 'center'
-		                }}/>
+				       	<TouchableHighlight onPress={() => this.drawer.openDrawer()}> 
+						    <View style={{
+			                	height: headerHeight, 
+			                	width: headerHeight, 
+			                	justifyContent: 'center',
+			                	backgroundColor: 'red'
+			                }}/>
+			            </TouchableHighlight>    
 			            <View style={{
 			            	height: headerHeight, 
 			            	width: width - (3 * headerHeight), 
@@ -119,29 +119,15 @@ export default class Header extends Component {
 			            <View style={{height: headerHeight, width: headerHeight, backgroundColor: purple, justifyContent: 'center'}}></View>
 			            <View style={{height: headerHeight, width: headerHeight, backgroundColor: purple, justifyContent: 'center'}}></View>
 			        </View>
-				        <ScrollView>
-					          <Text style={styles.welcome}>Content!</Text>
-					          <Text>{this.state.drawerStateChangedOutput}</Text>
-					          <Text>{this.state.drawerSlideOutput}</Text>
-					          <TouchableHighlight onPress={() => this.drawer.openDrawer()}>
-					            <Text>Open drawer</Text>
-					          </TouchableHighlight>
-					          <TextInput style={styles.inputField} />
-					    </ScrollView>
-			        </View>
-				        
-			      </DrawerLayout>
-                
+			            <View style={{top: 0, height, width, backgroundColor: 'gray'}}>
+			              {children}
+				        </View>  
+			</DrawerLayout>
 		);
 	}
 }
 
 var styles = StyleSheet.create({
-  container: {
-    alignItems: 'center',
-    justifyContent: 'center',
-    flex: 1
-  },
   welcome: {
     fontSize: 20,
     textAlign: 'center',

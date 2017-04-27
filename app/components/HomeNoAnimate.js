@@ -4,18 +4,23 @@ import {
   View,
   TouchableWithoutFeedback,
   StyleSheet,
+  Dimensions
 } from 'react-native';
 import { TabViewAnimated, TabViewPagerPan } from 'react-native-tab-view';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import Tags from './Tags';
 import Recent from './Recent';
+import { BLOG_NAME } from '../constants/config';
+import Container from '../common/Container';
+import Header from '../common/Header';
 import Categories from './Categories';
 import { purple } from '../constants/color';
 import { fetchCategories, fetchPosts, fetchTags } from '../actions';
-import { topNotificationAreaHeight, getScreenHeight } from '../constants/dimens';
+import { topNotificationAreaHeight, screenHeight, headerHeight } from '../constants/dimens';
 
 import type { NavigationState } from 'react-native-tab-view/types';
 
+const { width } = Dimensions.get('window');
 const AnimatedIcon = Animated.createAnimatedComponent(Ionicons);
 
 type Route = {
@@ -136,38 +141,48 @@ export default class HomeNoAnimate extends PureComponent<void, *, State> {
 
   render() {
     return (
-      <TabViewAnimated
-        style={[styles.container, this.props.style]}
-        navigationState={this.state}
-        renderScene={this._renderScene}
-        renderFooter={this._renderFooter}
-        onRequestChangeTab={this._handleChangeTab}
-        swipeEnabled={false}
-        animationEnabled={false}
-      />
+      <Container>
+          <Header name={BLOG_NAME}>
+            <TabViewAnimated
+              style={[styles.container, this.props.style]}
+              navigationState={this.state}
+              renderScene={this._renderScene}
+              renderFooter={this._renderFooter}
+              onRequestChangeTab={this._handleChangeTab}
+              swipeEnabled={false}
+              animationEnabled={false}
+            />
+          </Header>
+      </Container>
     );
   }
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    height: screenHeight,
+    width,
+    backgroundColor: 'blue'
   },
   tabbar: {
+    height: 66,
     flexDirection: 'row',
     justifyContent: 'space-between',
     backgroundColor: '#f4f4f4',
   },
   tab: {
     flex: 1,
+    justifyContent: 'center',
     alignItems: 'center',
     borderTopWidth: StyleSheet.hairlineWidth,
     borderTopColor: 'rgba(0, 0, 0, .2)',
     paddingTop: 4.5,
   },
   iconContainer: {
-    height: 26,
-    width: 26,
+    height: 30,
+    width: 30,
+    justifyContent: 'center',
+    alignSelf: 'center'
   },
   icon: {
     position: 'absolute',
@@ -176,16 +191,15 @@ const styles = StyleSheet.create({
     left: 0,
     right: 0,
     bottom: 0,
-    color: '#0084ff',
+    color: purple,
   },
   outline: {
     color: '#939393',
   },
   label: {
-    fontSize: 10,
-    marginTop: 3,
-    marginBottom: 1.5,
-    backgroundColor: 'transparent',
+    fontSize: 13,
+    fontWeight: '400',
+    height: 20
   },
   page: {
     flex: 1,

@@ -59,16 +59,13 @@ class Categories extends Component {
     render() {
         const { navigator } = this.props;
         return (
-            <TabBarContainer>
-                <Header name={'Categories'}/>
-                <View style={{top: headerHeight, width, height: heightWOtabBar - headerHeight}}>
+                <View style={{top: 0, width, height: heightWOtabBar - headerHeight}}>
 	                	<ScrollView>
 	                	  <View style={{alignItems: 'flex-start', flexDirection: 'row', flexWrap: 'wrap', margin: 5}}>
                             {this.renderCategories()}
 	                	  </View>
 	                	</ScrollView>
                 </View>
-            </TabBarContainer>
         );
     }
 }

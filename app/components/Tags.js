@@ -44,16 +44,13 @@ class Tags extends Component {
     render() {
         const { navigator } = this.props;
         return (
-            <TabBarContainer>
-                <Header name={'Popular Tags'}/>
-                <View style={{top: headerHeight, width, height: heightWOtabBar - headerHeight}}>
+                <View style={{width, height: heightWOtabBar - headerHeight}}>
                 	<ScrollView>
                 	  <View style={{alignItems: 'flex-start', flexDirection: 'row', flexWrap: 'wrap', margin: 5}}>
                         {this.renderTags()}
                 	  </View>
                 	</ScrollView>
                 </View>
-            </TabBarContainer>
         );
     }
 }
