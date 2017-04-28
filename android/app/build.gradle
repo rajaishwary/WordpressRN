@@ -95,6 +95,8 @@ android {
         ndk {
             abiFilters "armeabi-v7a", "x86"
         }
+        manifestPlaceholders = [onesignal_app_id: "dd0d570e-3001-4f3c-a1a3-0f81f1b4944e",
+                                onesignal_google_project_number: "973498806497"]
     }
     signingConfigs {
         release {
@@ -138,7 +140,6 @@ android {
 
 dependencies {
     compile project(':react-native-onesignal')
-    compile project(':@remobile/react-native-splashscreen')
     compile project(':react-native-spinkit')
     compile project(':react-native-vector-icons')
     compile project(':react-native-bottom-navigation')
