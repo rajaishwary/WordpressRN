@@ -41,7 +41,7 @@ export default class Root extends Component {
   }
 
   onIds(device) {
-  console.log('Device info: ', device);
+      console.log('Device info: ', device);
   }
 
   configureScene(route) {

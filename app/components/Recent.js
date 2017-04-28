@@ -16,7 +16,6 @@ import { fetchPosts } from '../actions';
 import { BLOG_NAME } from '../constants/config';
 import { topNotificationAreaHeight, heightWOtabBar, headerHeight, screenHeight } from '../constants/dimens';
 import PostDetail from './PostDetail';
-import SplashScreen from '@remobile/react-native-splashscreen';
 import DrawerLayout from 'react-native-drawer-layout';
 
 const height = heightWOtabBar - headerHeight;
@@ -41,14 +40,13 @@ class Recent extends Component {
 	    };
 	}
 
-	componentWillMount() {
+	componentDidMount() {
 	    const { dispatch } = this.props;
 	    dispatch(fetchPosts(this.counter));
 	    this.counter += 1;
   	}
 
   	componentWillReceiveProps(nextProps) {
-  		SplashScreen.hide();
 		const { data, requestingPosts } = nextProps.posts;
 		this.newData = this.newData.concat(data.posts);
 		this.setState({requestingPosts, dataSource: this.ds.cloneWithRows(this.newData)});
@@ -71,7 +69,6 @@ class Recent extends Component {
 	}
 
 	renderCard(data, id) {
-		console.log(data);
 		return (
 			<TouchableWithoutFeedback onPress={() => this.onPressPostCard(data)}>
 			<View style={styles.cardContainer} key={id}>
@@ -100,6 +97,7 @@ class Recent extends Component {
 
 
     render() {
+    	console.log(this.state.requestingPosts);
         const { navigator } = this.props;
         return ( 
 			<View style={styles.viewContainer}>
@@ -145,11 +143,6 @@ const styles = StyleSheet.create({
 	    backgroundColor: 'white',
 	    flexWrap: 'wrap', 
 	    alignItems: 'flex-start',
-	    shadowColor: 'gray',
-	    shadowOffset: { height: 2, width: 2 },
-	    shadowOpacity: 0.3,
-	    shadowRadius: 4,
-	    elevation: 5
 	  },
 });
 
