@@ -7,6 +7,7 @@ import {
     Dimensions,
     StyleSheet,
     TouchableOpacity,
+    TouchableWithoutFeedback,
     ScrollView,
     Image
 } from 'react-native';
@@ -20,6 +21,7 @@ import { fetchCatPosts } from '../actions';
 import { BLOG_NAME } from '../constants/config';
 import { topNotificationAreaHeight, heightWOtabBar, headerHeight, screenHeight } from '../constants/dimens';
 import PostDetail from './PostDetail';
+import NoCategorisedPosts from './NoCategorisedPosts';
 
 const { width, height } = Dimensions.get('window');
 const titleContainerHeight = width / 10;
@@ -73,18 +75,18 @@ class CategorisedPosts extends Component {
 
 	renderCard(data, id) {
 		return (
-			<TouchableOpacity onPress={() => this.onPressPostCard(data)}>
+			<TouchableWithoutFeedback onPress={() => this.onPressPostCard(data)}>
 			<View style={styles.cardContainer} key={id}>
 			    {data && data.attachments[0] && data.attachments[0].url ? (
 			    	<Image style={{width: cardWidth, height: height * 0.25}} source={{uri: data && data.attachments[0] && data.attachments[0].url}}/>
 			    ) : (<View
 			    	style={{width: cardWidth, height: height * 0.25, backgroundColor: '#e4e4e4', justifyContent: 'center', alignItems: 'center'}} 
 			    ><Text style={{fontSize: 22, fontWeight: '400'}}>{BLOG_NAME}</Text></View>)}
-				<View style={{width: cardWidth, height: height * 0.05, backgroundColor: '#f4f4f4', justifyContent: 'center'}} >
+				<View style={{width: cardWidth, height: 50, backgroundColor: '#f4f4f4', justifyContent: 'center'}} >
 				  <Text ellipsizeMode={'tail'} numberOfLines={1}  style={{padding: MARGIN, fontSize: 18, fontWeight: '400'}}>{data.title}</Text>
 				</View>
 			</View>
-			</TouchableOpacity>
+			</TouchableWithoutFeedback>
 		);
 	}
 
@@ -107,19 +109,22 @@ class CategorisedPosts extends Component {
 	                   <Text style={{left: MARGIN / 2, textAlign: 'center', color: 'white', fontWeight: '600', fontSize: 20}}>Post</Text>
 		            </View>
 		        </View>
-		        <View style={styles.viewContainer}>
-					<View style={{height: titleContainerHeight, width: width, justifyContent: 'center'}}>
-						<Text style={{left: width * 0.05, color: '#000', fontSize: 18, fontWeight: '600'}}>{`${category.title} posts`}</Text>
-					</View>
-					<View style={{flex: 1}}>
-						<ListView
-							dataSource={this.state.dataSource}
-							renderRow={(rowData, id) => this.renderCard(rowData, id)}
-							enableEmptySections={true}
-							onEndReached={this.fetchNextPosts}
-						/>
-					</View>
-				</View>
+		        { this.state.requestingCatPosts ? (<NoCategorisedPosts/>) : (
+		   			 <View style={styles.viewContainer}>
+						<View style={{height: titleContainerHeight, width: width, justifyContent: 'center'}}>
+							<Text style={{left: width * 0.05, color: '#000', fontSize: 18, fontWeight: '600'}}>{`${category.title} posts`}</Text>
+						</View>
+						<View style={{flex: 1}}>
+							<ListView
+								dataSource={this.state.dataSource}
+								renderRow={(rowData, id) => this.renderCard(rowData, id)}
+								enableEmptySections={true}
+								onEndReached={this.fetchNextPosts}
+							/>
+						</View>
+					</View>    	
+		        )}
+		        
             </View>
         );
     }
@@ -161,10 +166,10 @@ const styles = StyleSheet.create({
 	    flexWrap: 'wrap', 
 	    alignItems: 'flex-start',
 	    shadowColor: 'gray',
-	    shadowOffset: { height: 2, width: 2 },
-	    shadowOpacity: 0.3,
-	    shadowRadius: 4,
-	    elevation: 5
+	    shadowOffset: { height: 1, width: 1 },
+	    shadowOpacity: 0.2,
+	    shadowRadius: 3,
+	    elevation: 1
 	  },
 	headerView: {
    		position: 'absolute', 

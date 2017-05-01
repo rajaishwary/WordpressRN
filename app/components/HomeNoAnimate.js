@@ -17,7 +17,6 @@ import Categories from './Categories';
 import { purple } from '../constants/color';
 import { fetchCategories, fetchPosts, fetchTags } from '../actions';
 import { topNotificationAreaHeight, screenHeight, headerHeight } from '../constants/dimens';
-
 import type { NavigationState } from 'react-native-tab-view/types';
 
 const { width } = Dimensions.get('window');
