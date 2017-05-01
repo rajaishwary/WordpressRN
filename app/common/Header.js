@@ -48,7 +48,7 @@ export default class Header extends Component {
 
 	    const navigationView = (
 	      <View style={[styles.container]}>
-	        <Text>Hello there!</Text>
+	        <Text>In development</Text>
 	      </View>
 	    );
 
@@ -57,7 +57,7 @@ export default class Header extends Component {
 	       		<DrawerLayout
 			        onDrawerSlide={(e) => this.setState({drawerSlideOutput: JSON.stringify(e.nativeEvent)})}
 			        onDrawerStateChanged={(e) => this.setState({drawerStateChangedOutput: JSON.stringify(e)})}
-			        drawerBackgroundColor="red"
+			        drawerBackgroundColor="white"
 			        drawerWidth={width * 0.7}
 			        drawerLockMode={drawerLockMode}
 			        ref={(drawer) => { return this.drawer = drawer  }}
@@ -75,8 +75,10 @@ export default class Header extends Component {
 			                	height: headerHeight, 
 			                	width: headerHeight, 
 			                	justifyContent: 'center',
-			                	backgroundColor: 'red'
-			                }}/>
+			                	alignItems: 'center'
+			                }}>
+			                	<Icon name="menu" size={22} color="#fff" />
+			                </View>
 			            </TouchableHighlight>    
 			            <View style={{
 			            	height: headerHeight, 

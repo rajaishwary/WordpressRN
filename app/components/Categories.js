@@ -6,6 +6,7 @@ import {
     StyleSheet,
     TouchableOpacity,
 } from 'react-native';
+import { API, GET_CAT_POSTS } from '../constants/API';
 import { connect } from 'react-redux';
 import TabBarContainer from '../common/TabBarContainer';
 import Header from '../common/Header';
@@ -14,6 +15,7 @@ import { BLOG_NAME } from '../constants/config';
 import { topNotificationAreaHeight, heightWOtabBar, headerHeight, width } from '../constants/dimens';
 import CategorisedPosts from './CategorisedPosts';
 import { fetchCategories, fetchPosts, fetchTags } from '../actions';
+import { getFetch } from '../utils/APIutils';
 
 class Categories extends Component {
 	constructor(props) {
@@ -47,23 +49,27 @@ class Categories extends Component {
     }
 
     renderCategories() {
+
         if(this.state.requestingCategories === true) {
             return (
                 <View><Text>Getting data</Text></View>
             );
         } else { 
-            return this.state.categories.map((category, id) => (
-              <TouchableOpacity key={id} onPress={() => this.onCategoryPress(category)}> 
-                <View style={styles.cardContainer}>
-                    <Text style={{textAlign: 'center', fontWeight: '600', fontSize: 18, color: 'white'}}>{category.title}</Text>
-                </View>
-              </TouchableOpacity> 
-            ));
+            return this.state.categories.map((category, id) => {
+              return (
+                <TouchableOpacity key={id} onPress={() => this.onCategoryPress(category)}> 
+                  <View style={styles.cardContainer}>
+                      <Text style={{textAlign: 'center', fontWeight: '600', fontSize: 18, color: 'white'}}>{category.title}</Text>
+                  </View>
+                </TouchableOpacity> 
+              );
+            });
         }
     }
 
     render() {
         const { navigator } = this.props;
+        console.log(this.state.categories);
         return (
                 <View style={{top: 0, width, height: heightWOtabBar - headerHeight}}>
 	                	<ScrollView>

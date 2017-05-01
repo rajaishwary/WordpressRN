@@ -17,6 +17,8 @@ import { BLOG_NAME } from '../constants/config';
 import { topNotificationAreaHeight, heightWOtabBar, headerHeight, screenHeight } from '../constants/dimens';
 import PostDetail from './PostDetail';
 import DrawerLayout from 'react-native-drawer-layout';
+import NoRecentCards from './NoRecentCards';
+import HTML from 'react-native-fence-html';
 
 const height = heightWOtabBar - headerHeight;
 const { width } = Dimensions.get('window');
@@ -86,8 +88,8 @@ class Recent extends Component {
 				    	<Text style={{fontSize: 36, fontWeight: '600'}}>{BLOG_NAME}</Text>
 					</View>
 				</View>)}
-				<View style={{width: width, height: height * 0.05, backgroundColor: '#f4f4f4', justifyContent: 'center'}} >
-				  <Text ellipsizeMode={'tail'} numberOfLines={1}  style={{padding: MARGIN, fontSize: 18, fontWeight: '400'}}>{data.title}</Text>
+				<View style={{width: width, height: 50, backgroundColor: '#f4f4f4', justifyContent: 'center'}} >
+				  <Text ellipsizeMode={'tail'} numberOfLines={1}  style={{padding: MARGIN, fontSize: 16, fontWeight: '400'}}>{data.title}</Text>
 				</View>
 			</View>
 			</TouchableWithoutFeedback>
@@ -99,9 +101,13 @@ class Recent extends Component {
     render() {
     	console.log(this.state.requestingPosts);
         const { navigator } = this.props;
-        return ( 
-			<View style={styles.viewContainer}>
-				<View style={{height: titleContainerHeight, width: width, justifyContent: 'center'}}>
+        return (
+			<View>
+			    {this.state.requestingPosts ? (
+			    	<NoRecentCards/>
+			    ) : (
+			    <View style={styles.viewContainer}>
+			    	<View style={{height: titleContainerHeight, width: width, justifyContent: 'center'}}>
 					<Text style={{left: width * 0.05, color: '#000', fontSize: 18, fontWeight: '600'}}>Recent Posts</Text>
 				</View>
 				<View style={{flex: 1}}>
@@ -112,6 +118,8 @@ class Recent extends Component {
 						onEndReached={this.fetchNextPosts}
 					/>
 				</View>
+				</View>
+			    )}
 			</View>
         );
     }
@@ -129,7 +137,8 @@ const styles = StyleSheet.create({
 	    position: 'absolute', 
 	    top: 0,
 	    width: width, 
-	    height, 
+	    height,
+	    backgroundColor: '#e4e4e4' 
 	  },
 	postsView: {
 		justifyContent : 'center',
@@ -143,6 +152,11 @@ const styles = StyleSheet.create({
 	    backgroundColor: 'white',
 	    flexWrap: 'wrap', 
 	    alignItems: 'flex-start',
+	    shadowColor: 'gray',
+	    shadowOffset: { height: 1, width: 1 },
+	    shadowOpacity: 0.2,
+	    shadowRadius: 3,
+	    elevation: 1
 	  },
 });
 
