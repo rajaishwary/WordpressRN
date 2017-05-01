@@ -1,4 +1,4 @@
-package com.wordpressrn;
+package com.theviralpages.hindi;
 
 import com.facebook.react.ReactActivity;
 
