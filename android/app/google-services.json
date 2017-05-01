@@ -1,27 +1,27 @@
 {
   "project_info": {
-    "project_number": "855086701743",
-    "firebase_url": "https://hinditheviralpages-f026a.firebaseio.com",
-    "project_id": "hinditheviralpages-f026a",
-    "storage_bucket": "hinditheviralpages-f026a.appspot.com"
+    "project_number": "490471891056",
+    "firebase_url": "https://theviralpages-7f0a3.firebaseio.com",
+    "project_id": "theviralpages-7f0a3",
+    "storage_bucket": "theviralpages-7f0a3.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:855086701743:android:20173e0bd2687e40",
+        "mobilesdk_app_id": "1:490471891056:android:20173e0bd2687e40",
         "android_client_info": {
           "package_name": "com.theviralpages.hindi"
         }
       },
       "oauth_client": [
         {
-          "client_id": "855086701743-lhn7s9rpikbthujt48gm9rl3au2u07cv.apps.googleusercontent.com",
+          "client_id": "490471891056-l9l81qirtngp975pdp14mg3euqckgh5g.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAyJ24PH8TKn7rdjnHgMtRn8iZbSWi1F48"
+          "current_key": "AIzaSyD13wJdlSEDxEZiegrNU3AyAL-mavI2axY"
         }
       ],
       "services": {

@@ -7,42 +7,57 @@ import {
     TouchableHighlight,
 } from 'react-native';
 import HomeNoAnimate from './HomeNoAnimate';
-import OneSignal from 'react-native-onesignal';
+import FCM, {FCMEvent, RemoteNotificationResult, WillPresentNotificationResult, NotificationType} from 'react-native-fcm';
+
 
 export default class Root extends Component {
-  
-  componentWillMount() {
-      OneSignal.addEventListener('received', this.onReceived);
-      OneSignal.addEventListener('opened', this.onOpened);
-      OneSignal.addEventListener('registered', this.onRegistered);
-      OneSignal.addEventListener('ids', this.onIds);
-  }
 
-  componentWillUnmount() {
-      OneSignal.removeEventListener('received', this.onReceived);
-      OneSignal.removeEventListener('opened', this.onOpened);
-      OneSignal.removeEventListener('registered', this.onRegistered);
-      OneSignal.removeEventListener('ids', this.onIds);
-  }
+  componentDidMount() {
+        FCM.requestPermissions(); // for iOS
+        FCM.getFCMToken().then(token => {
+            console.log(token)
+            // store fcm token in your server
+        });
+        this.notificationListener = FCM.on(FCMEvent.Notification, async (notif) => {
+            // there are two parts of notif. notif.notification contains the notification payload, notif.data contains data payload
+            if(notif.local_notification){
+              //this is a local notification
+            }
+            if(notif.opened_from_tray){
+              //app is open/resumed because user clicked banner
+            }
+            await someAsyncCall();
+            
+            if(Platform.OS ==='ios'){
+              //optional
+              //iOS requires developers to call completionHandler to end notification process. If you do not call it your background remote notifications could be throttled, to read more about it see the above documentation link. 
+              //This library handles it for you automatically with default behavior (for remote notification, finish with NoData; for WillPresent, finish depend on "show_in_foreground"). However if you want to return different result, follow the following code to override
+              //notif._notificationType is available for iOS platfrom
+              switch(notif._notificationType){
+                case NotificationType.Remote:
+                  notif.finish(RemoteNotificationResult.NewData) //other types available: RemoteNotificationResult.NewData, RemoteNotificationResult.ResultFailed
+                  break;
+                case NotificationType.NotificationResponse:
+                  notif.finish();
+                  break;
+                case NotificationType.WillPresent:
+                  notif.finish(WillPresentNotificationResult.All) //other types available: WillPresentNotificationResult.None
+                  break;
+              }
+            }
+        });
+        this.refreshTokenListener = FCM.on(FCMEvent.RefreshToken, (token) => {
+            console.log(token)
+            // fcm token may not be available on first load, catch it here
+        });
+    }
 
-  onReceived(notification) {
-      console.log("Notification received: ", notification);
-  }
+    componentWillUnmount() {
+        // stop listening for events
+        this.notificationListener.remove();
+        this.refreshTokenListener.remove();
+    }
 
-  onOpened(openResult) {
-    console.log('Message: ', openResult.notification.payload.body);
-    console.log('Data: ', openResult.notification.payload.additionalData);
-    console.log('isActive: ', openResult.notification.isAppInFocus);
-    console.log('openResult: ', openResult);
-  }
-
-  onRegistered(notifData) {
-      console.log("Device had been registered for push notifications!", notifData);
-  }
-
-  onIds(device) {
-      console.log('Device info: ', device);
-  }
 
   configureScene(route) {
     return {
