@@ -34,9 +34,9 @@ class Tags extends Component {
             );
         } else {
             return this.state.tags.map((tag, id) => (
-                <View key={id} style={styles.cardContainer}>
-                    <Text style={{textAlign: 'center', fontWeight: '600', fontSize: 18, padding: 5}}>#{tag.title}</Text>
-                </View>
+                    <View key={id} style={styles.cardContainer}>
+                        <Text style={{textAlign: 'center', fontWeight: '600', fontSize: 18, padding: 5}}>#{tag.title}</Text>
+                    </View>
             ));
         }
     }
@@ -67,6 +67,5 @@ const styles = StyleSheet.create({
     backgroundColor: tile,
     justifyContent: 'center',
     margin: 5,
-    borderRadius: 5,
   }
 });

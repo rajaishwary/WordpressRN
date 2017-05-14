@@ -23,7 +23,7 @@ export function getScreenHeight() {
 
 export function getHeaderHeight() {
 	const iosHeaderHeight = 44;
-	const androidHeaderHeight = 56;
+	const androidHeaderHeight = 44;
 	if (Platform.OS === 'ios') {
 		return (iosHeaderHeight);
 	} else if (Platform.OS === 'android') {

@@ -136,7 +136,7 @@ export default class HomeNoAnimate extends PureComponent<void, *, State> {
   render() {
     return (
       <Container>
-          <Header name={BLOG_NAME}>
+          <Header handleChangeTab={this._handleChangeTab} name={BLOG_NAME}>
             <TabViewAnimated
               style={[styles.container, this.props.style]}
               navigationState={this.state}
