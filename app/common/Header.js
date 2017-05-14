@@ -10,6 +10,7 @@ import {
 	Switch,
 	TextInput,
 	TouchableHighlight,
+	Image,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/SimpleLineIcons';
 import { 
@@ -24,12 +25,16 @@ import DrawerLayout from 'react-native-drawer-layout';
 
 const { width } = Dimensions.get('window');
 const height = screenHeight - headerHeight;
-const margin = height / 30;
+const margin = height / 60;
+const drawerWidth=width * 0.7;
 
 export default class Header extends Component {
 	constructor(props) {
 	  super(props);
 	  this.close = this.close.bind(this);
+	  this.handleCategoryPress = this.handleCategoryPress.bind(this);
+	  this.handleHomePress = this.handleHomePress.bind(this);
+	  this.handleTagsPress = this.handleTagsPress.bind(this);
 	  this.state = {
 	  	drawerLockMode: 'unlocked'
 	  };
@@ -40,6 +45,21 @@ export default class Header extends Component {
     navigator.pop();
   }
 
+  handleCategoryPress() {
+  	this.props.handleChangeTab(1);
+  	this.drawer.closeDrawer();
+  }
+
+  handleHomePress() {
+  	this.props.handleChangeTab(0);
+  	this.drawer.closeDrawer();
+  }
+
+  handleTagsPress() {
+  	this.props.handleChangeTab(2);
+  	this.drawer.closeDrawer();
+  }
+
 	render() {
 		const { name } = this.props;
 		const {
@@ -47,8 +67,25 @@ export default class Header extends Component {
 	    } = this.state;
 
 	    const navigationView = (
-	      <View style={[styles.container]}>
-	        <Text>In development</Text>
+	      <View style={{flex: 1}}>
+	      	<ScrollView>
+	        	<Image source={require('../assets/logo.png')} style={{width: width * 0.7, height: width * 0.7}}/>
+	        	<TouchableOpacity onPress={() => this.handleHomePress()}>
+		        	<View style={styles.item}>
+		        		<Text style={styles.itemText}>Home</Text>
+		        	</View>
+	        	</TouchableOpacity>
+	        	<TouchableOpacity onPress={() => this.handleCategoryPress()}>
+		        	<View style={styles.item}>
+		        		<Text style={styles.itemText}>Categories</Text>
+		        	</View>
+	        	</TouchableOpacity>
+	        	<TouchableOpacity onPress={() => this.handleTagsPress()}>
+		        	<View style={styles.item}>
+		        		<Text style={styles.itemText}>Popular Tags</Text>
+		        	</View>
+	        	</TouchableOpacity>
+	      	</ScrollView>
 	      </View>
 	    );
 
@@ -119,6 +156,17 @@ var styles = StyleSheet.create({
     height: 200,
     paddingTop: 50,
   },
+  item: { height: 44, 
+  	width: drawerWidth, 
+  	borderBottomWidth: 1, 
+  	borderBottomColor: 'black', 
+  	justifyContent: 'center',
+  	padding: margin,
+  },
+  itemText: {
+  	fontSize: 16,
+  	fontWeight: '600',
+  }
 });
 
 /*<TouchableOpacity onPress={() => this.close()}>
