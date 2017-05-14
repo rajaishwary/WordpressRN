@@ -7,228 +7,208 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		089CD5D3D13F373218B4DDC049465FD8 /* GPBWellKnownTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = FBC167413116C6A3D5CB6A6FF890684A /* GPBWellKnownTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0ADDCEBEADB49AE70A0D9F7D9023D1B1 /* GPBUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E63401A4016579D0174BC4CF2130180 /* GPBUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		124FB32A195D60E37C3662C9424BAA6B /* Duration.pbobjc.h in Headers */ = {isa = PBXBuildFile; fileRef = D53670FAA6E1718A718B2DEC4A0D5961 /* Duration.pbobjc.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		12812544AD61D035E2F250EBF780E666 /* GPBRootObject_PackagePrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 4257DCAC74DB9528BE30D480C83A0614 /* GPBRootObject_PackagePrivate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1375E7BBCAA9E2FB9FEA4E3562FDEDB1 /* SourceContext.pbobjc.h in Headers */ = {isa = PBXBuildFile; fileRef = 83B4ABDC75BD3D90ED81B8E3493A181B /* SourceContext.pbobjc.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0169931432A986403AC52FDF15F298BF /* GPBDescriptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C5FFA7382C895811E3B0023C0F41A23 /* GPBDescriptor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		0D55C350C8E3C26FE297053751C8E763 /* GPBProtocolBuffers.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FE01C0885F4C0235FE15152DD46C589 /* GPBProtocolBuffers.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0FFDBD10086335C35EB7E1BED609B418 /* GPBUnknownFieldSet.h in Headers */ = {isa = PBXBuildFile; fileRef = AAE41CCD2EF876A2901422565A318450 /* GPBUnknownFieldSet.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1044778453BCDF016176D232C0BE0FDB /* GPBExtensionInternals.h in Headers */ = {isa = PBXBuildFile; fileRef = F935CCABB5F02337BDDE8E5F38F3069D /* GPBExtensionInternals.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		12B23AF30DF045E9D7BF85011902949C /* Empty.pbobjc.h in Headers */ = {isa = PBXBuildFile; fileRef = 7DB44A4D25E7DF53601657E9E2474251 /* Empty.pbobjc.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		134773A53DAD53F920DB199CCE9CD27F /* Wrappers.pbobjc.h in Headers */ = {isa = PBXBuildFile; fileRef = EB0EE329D8FF6EA2AF9AC450D83516C7 /* Wrappers.pbobjc.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1461B1078A5B4B3789B5302DF748906C /* GPBMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = A7ED402B02A8F914913B199E8524129B /* GPBMessage.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		14D4E200287C07A61889F411408B6C53 /* FieldMask.pbobjc.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BCD98927E2E636FDB3DD76DF0E71CFF /* FieldMask.pbobjc.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		154E5AB0C541CED05D795C6198947D27 /* GTMLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = E86D866E7527079B9C72838146FC65E0 /* GTMLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1647DFFD0505AD181C210A948CDCFB80 /* GPBCodedOutputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 3144A339047FF93537D206919CD8123B /* GPBCodedOutputStream.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		1848C113058A69EAD4C5AE21189D06AD /* GPBUtilities_PackagePrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 5CD6A8E93072E973518F5B71F6F0228B /* GPBUtilities_PackagePrivate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1B14E64AB4A8D0AB7883ECA500F1841F /* GPBUnknownField.m in Sources */ = {isa = PBXBuildFile; fileRef = CC776ACF734C9EAD15DA52BA321A061C /* GPBUnknownField.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		1C6CF868480F80E42155544F2333CB89 /* Wrappers.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 66511A40A137AF4ED38BD50124E409C3 /* Wrappers.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		211B0CB441681421D2EAFC75FC4FFEA5 /* FieldMask.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 49742342001E384A48A41292E56FCF35 /* FieldMask.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		2279F41043ABA1ED2A0D9D4EB6A9237F /* Any.pbobjc.h in Headers */ = {isa = PBXBuildFile; fileRef = 001E97685635E5E5D85137D15AC5F1EC /* Any.pbobjc.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		22B5ACDF58B8C241C26BCC25345FF0CA /* GPBCodedOutputStream.h in Headers */ = {isa = PBXBuildFile; fileRef = ED712B0D3871CCA85C312BC2282A4D51 /* GPBCodedOutputStream.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		244EA14AE01FDDBAA4D5309CF5EE4F4F /* GPBDescriptor_PackagePrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A954DE546890C19A47689E7880DEB58 /* GPBDescriptor_PackagePrivate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2CAAC99D734BC0F02449D57A4EA55B40 /* GPBDescriptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C5FFA7382C895811E3B0023C0F41A23 /* GPBDescriptor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		16A37653921E61CF863324F9259ACCC3 /* Type.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A48D3AFA32C77CF2B0E0EF95B65114B /* Type.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		16C1B76B5B09DCF4D3D30F1B284936BF /* Api.pbobjc.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A51F2B567669037BF3936E5CA172E70 /* Api.pbobjc.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		17C1B44ED9486109DF5592FD6A22FBCB /* Struct.pbobjc.h in Headers */ = {isa = PBXBuildFile; fileRef = B9DB2913D1A90A71CF70E840F03289A9 /* Struct.pbobjc.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		17EBB75AC23D9E3B672A87E6974C783D /* GPBUnknownField.m in Sources */ = {isa = PBXBuildFile; fileRef = CC776ACF734C9EAD15DA52BA321A061C /* GPBUnknownField.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		189C01122D64C4AD283E9DA6C1B2782E /* GPBMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = 1618937E888411B5734B28440C9984BB /* GPBMessage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		18D8B4203E7A5F9BF28FB6C1274DD58A /* Duration.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C039443FDB80129B611548AD43B612D /* Duration.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		1C5B1B9C99B78477E00E2B9F1CB4C098 /* Wrappers.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 66511A40A137AF4ED38BD50124E409C3 /* Wrappers.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		1D6766AB00714E5EC4CA6F7265BD2450 /* Api.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB00209ED19EF6316064EEA3E014E71 /* Api.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		275D96EB96BAC7239E36550639F02F1B /* GPBRuntimeTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = C0F15AF57D88CBECACCD6280434B04F4 /* GPBRuntimeTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2BDB8EB4C6CCFA1BA257949DFD74CC9B /* Protobuf-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C0317CC4332742F7BBFD8954FFEF65EA /* Protobuf-dummy.m */; };
 		2D3370592B46135A72AE93EA362734F0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D48912B8B70552CB7E69D87039E4C2C /* Foundation.framework */; };
-		328F0CF4BCBD25E647AE8EF7ED3A266F /* GPBProtocolBuffers.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FE01C0885F4C0235FE15152DD46C589 /* GPBProtocolBuffers.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		345B39334FB74B7798D285260DC8D0EA /* GPBRootObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 2587BF16BB234A7A454FB192744EEF0B /* GPBRootObject.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		38DC814F6C77EF587456D5AE421C29CD /* GPBMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = A7ED402B02A8F914913B199E8524129B /* GPBMessage.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		3EB301ADF1797386F4E36E1F8B2750EA /* Type.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A48D3AFA32C77CF2B0E0EF95B65114B /* Type.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		418066826F7B3B58A46860FC9503346D /* GPBArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BCA419DEE41C61FAEB2F6CF8AE135CA /* GPBArray.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		42A791A3B21BE8D199048ABCFDCB1A17 /* GPBExtensionRegistry.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3145450B8C4DA84CE065BF8059AC12 /* GPBExtensionRegistry.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		42C9F8CAD2D54DF210CCC60770291DAE /* Type.pbobjc.h in Headers */ = {isa = PBXBuildFile; fileRef = 12678477998C033F1E20696535904D0D /* Type.pbobjc.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		44BD05928C2337EE94003FC312AA9502 /* Timestamp.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB0B082A039C59F90E978F02C6326E5 /* Timestamp.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		45C289C7D91F93742581E2A9768BF5C3 /* Empty.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 560DFBB8666AEC35F6725B87070327EF /* Empty.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		49C0A8F3652B7AC6496007C635B1661C /* Pods-WordpressRN-tvOSTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E0ED4F3FC3971D90F5C1AF32D4D81F32 /* Pods-WordpressRN-tvOSTests-dummy.m */; };
-		49EE654DB9CE38D6E9F32C0A76337A26 /* Pods-WordpressRN-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B12E6FA54937C10374AED002D0A4C938 /* Pods-WordpressRN-dummy.m */; };
-		4E17A7CB37CFD8305A338A4A945F93B1 /* GPBRuntimeTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = C0F15AF57D88CBECACCD6280434B04F4 /* GPBRuntimeTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		504F73FC37EA15899365BC98951245A4 /* Struct.pbobjc.h in Headers */ = {isa = PBXBuildFile; fileRef = B9DB2913D1A90A71CF70E840F03289A9 /* Struct.pbobjc.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		59458B8980A9728F3095835DEBD22F1F /* GPBCodedOutputStream_PackagePrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F650B9F7CD0DFCCBE4F47028DA2A88B /* GPBCodedOutputStream_PackagePrivate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5A10EAC81B77870F271D6C914D3EE77B /* GPBUnknownFieldSet_PackagePrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = DD7791BE8EB96D30317E4AA74D170EBD /* GPBUnknownFieldSet_PackagePrivate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		32CB34192FE7FA1642B7B7143F3D86D9 /* Type.pbobjc.h in Headers */ = {isa = PBXBuildFile; fileRef = 12678477998C033F1E20696535904D0D /* Type.pbobjc.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		367E7B23510D1D18B4DC73CDE3C81CE0 /* GPBWellKnownTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = FBC167413116C6A3D5CB6A6FF890684A /* GPBWellKnownTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		39C3B6447C82FB2EA3264913F8898613 /* Empty.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 560DFBB8666AEC35F6725B87070327EF /* Empty.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		47C06A2F5E531B58DCA5319DCFAD2381 /* GPBUnknownFieldSet_PackagePrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = DD7791BE8EB96D30317E4AA74D170EBD /* GPBUnknownFieldSet_PackagePrivate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		49D8D5A7132D89120CBFFC3958FDF172 /* GPBBootstrap.h in Headers */ = {isa = PBXBuildFile; fileRef = 540B2D2CBD1C17660F3ED370958484B8 /* GPBBootstrap.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4ECB3DD21A3B9BC9DABCAB68814C5823 /* GPBDictionary_PackagePrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = DD120B7A683C50623F2D70ACB691D30E /* GPBDictionary_PackagePrivate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		57953E7920F24EC2329AA9E772D51D22 /* Pods-TheViralPages-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9677EA353DAF5C68E941E3EB43AF9D66 /* Pods-TheViralPages-dummy.m */; };
+		59130EE2727B125875BDBE220013546F /* GPBDescriptor_PackagePrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A954DE546890C19A47689E7880DEB58 /* GPBDescriptor_PackagePrivate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5B8F036F7FAAF35FE98CE3FBFF25D72F /* GoogleToolboxForMac-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CE503410B599E7B4E0E4A35111B6C154 /* GoogleToolboxForMac-dummy.m */; };
-		5C5AD83B235C811E99C4963A6BDA8D1C /* GPBBootstrap.h in Headers */ = {isa = PBXBuildFile; fileRef = 540B2D2CBD1C17660F3ED370958484B8 /* GPBBootstrap.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5CFD7E3CCED1C8DDAEC0FCE36F9F2E39 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D48912B8B70552CB7E69D87039E4C2C /* Foundation.framework */; };
-		5D0631F759CDFB66DA22435A0432E650 /* GPBMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = 1618937E888411B5734B28440C9984BB /* GPBMessage.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5F30646AE02E594908401CB1FC43D91F /* Duration.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C039443FDB80129B611548AD43B612D /* Duration.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		5D1978476CBCE1CAE2172D83B330C7F8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D48912B8B70552CB7E69D87039E4C2C /* Foundation.framework */; };
+		64D5BDDC669F6D9C3CFE610A393734D4 /* FieldMask.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 49742342001E384A48A41292E56FCF35 /* FieldMask.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		68C28E491A9F49E6CC6DFA3EBE0ED356 /* GPBArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BCA419DEE41C61FAEB2F6CF8AE135CA /* GPBArray.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		6A5451E67CBAAED4E81995B58427A175 /* GTMNSData+zlib.h in Headers */ = {isa = PBXBuildFile; fileRef = B5D730424C36A9D0BB12473678C5C609 /* GTMNSData+zlib.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6D567A47BD12383EFB3634714F0A36CD /* GPBWellKnownTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 6350E3F8D26F471341917F83FFA34173 /* GPBWellKnownTypes.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		71EC6C5A9DD70AFB4B9C7AA403775F44 /* GPBDescriptor.h in Headers */ = {isa = PBXBuildFile; fileRef = 6DF2B5848E0B8DD0038079C4F46E73D7 /* GPBDescriptor.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7238BE463EA6C287AE9F69F652A49075 /* GPBProtocolBuffers_RuntimeSupport.h in Headers */ = {isa = PBXBuildFile; fileRef = 8952804670E9F30C536634A5CFBB8C7B /* GPBProtocolBuffers_RuntimeSupport.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		74822DA9C4ACEF86467CF89594EF49B7 /* Protobuf-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C0317CC4332742F7BBFD8954FFEF65EA /* Protobuf-dummy.m */; };
-		766C6CDE0136D51167861496B2A7E4B5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D48912B8B70552CB7E69D87039E4C2C /* Foundation.framework */; };
-		7CCA9361D28E0E90961FCA8BD58F65E7 /* FieldMask.pbobjc.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BCD98927E2E636FDB3DD76DF0E71CFF /* FieldMask.pbobjc.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7E753DD8B75D9430BBE26AC5F3DDB27C /* Any.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 54C4EE1A27D31835838453206F2A58CD /* Any.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		7EAB409B67F8C5B5050B1A660D54BB9D /* Struct.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = EA487A96C086BF8484214DD55DCE2F2A /* Struct.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		7EDD009142F28AB1347B6FE4BFE0C091 /* Timestamp.pbobjc.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EF7A1D9262A7F997B1CB962C559EDFB /* Timestamp.pbobjc.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		806D5B079621648BB24CE9FA54B1DB55 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D48912B8B70552CB7E69D87039E4C2C /* Foundation.framework */; };
-		8C02DE2BA8E290D98FAE4C26B40FAC40 /* GPBDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 403E122259C6D09E8CA6642A34DFD387 /* GPBDictionary.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		8DBF896782C7D52D7A99A8ADF1BA794A /* GPBCodedInputStream.h in Headers */ = {isa = PBXBuildFile; fileRef = CCCC637CB53D0538C2506E95224E1257 /* GPBCodedInputStream.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8DFD089E8DACB22CB4D1F262F3DD3716 /* GPBUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2EA46D8AA4FAEA8F6A3270C49D6FFD /* GPBUtilities.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		7B6B91FE5EBDCE57E0C7F8D491DC7D44 /* Timestamp.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB0B082A039C59F90E978F02C6326E5 /* Timestamp.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		84D4D0EC0B7D5E69433BF48715DE88BE /* GPBWireFormat.h in Headers */ = {isa = PBXBuildFile; fileRef = DF3EBD0AB922CCB3EEA466256111AD6E /* GPBWireFormat.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		884DF39E89EA75289DA2C9923D6304FD /* GPBCodedInputStream.h in Headers */ = {isa = PBXBuildFile; fileRef = CCCC637CB53D0538C2506E95224E1257 /* GPBCodedInputStream.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		905974FE0130CC15208964408802F7FF /* Duration.pbobjc.h in Headers */ = {isa = PBXBuildFile; fileRef = D53670FAA6E1718A718B2DEC4A0D5961 /* Duration.pbobjc.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		90906AC58824566DFC6875E1ED25E855 /* GTMDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = AB05DC9372EAA60C5C0E92E232197796 /* GTMDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9208AF3D9030ABE9BCA9FB87D4E08179 /* GPBUnknownFieldSet.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A6D92AEE6DA9E51EFEDB35B8CB850F /* GPBUnknownFieldSet.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		94599A6BCBF3780AEC409EBCFB0AA199 /* GPBWireFormat.h in Headers */ = {isa = PBXBuildFile; fileRef = DF3EBD0AB922CCB3EEA466256111AD6E /* GPBWireFormat.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9B601B0E5A89BF173EADCC2A123A9013 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D48912B8B70552CB7E69D87039E4C2C /* Foundation.framework */; };
-		9D9904D21680615FCA43886CC0577574 /* GPBExtensionInternals.h in Headers */ = {isa = PBXBuildFile; fileRef = F935CCABB5F02337BDDE8E5F38F3069D /* GPBExtensionInternals.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9DE1A2E95EDBAF3FEB279F08AFF454E4 /* Api.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB00209ED19EF6316064EEA3E014E71 /* Api.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		A0969F529715EC9E59D9AB71CEB6D561 /* GPBUnknownField_PackagePrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E2A9FEFA9D13AEDC72FECE90E8ADF06 /* GPBUnknownField_PackagePrivate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A2E534861D11F7E022958F7998CA37A2 /* GPBUnknownFieldSet.h in Headers */ = {isa = PBXBuildFile; fileRef = AAE41CCD2EF876A2901422565A318450 /* GPBUnknownFieldSet.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AAC7AAA9CA57C08B65A7E26E3B7B9ED8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E89CCC94F17EC560C78ED506CF416FAF /* Foundation.framework */; };
-		B10DFBB42D48B6D9274F27019E66EBEB /* GPBRootObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 9EA8A3C6BF5B08B278E78881E31D040D /* GPBRootObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B54EE3873BE552E71F47178C91D76C33 /* GPBExtensionRegistry.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E536CB0A86E891E53BBBCE77E73737B /* GPBExtensionRegistry.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B5BB29E9D3723FDE187B5E3831551BDE /* Pods-WordpressRNTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DE275DB0D87F225E7F0C4B9BE782BD5 /* Pods-WordpressRNTests-dummy.m */; };
-		BA5DBD4D3E46E6582D595AF722A37F30 /* SourceContext.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = AC767302BE2740A218AB38624FAF415D /* SourceContext.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		BF44E8FEC504954704A831766A286E62 /* GPBWireFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 08FD64A48EE22B8B96AC74D7B5F9ED9D /* GPBWireFormat.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		CB4DF032A195DDF5327C40BCD2B82D64 /* Wrappers.pbobjc.h in Headers */ = {isa = PBXBuildFile; fileRef = EB0EE329D8FF6EA2AF9AC450D83516C7 /* Wrappers.pbobjc.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CBEFF3371040E768A2364DDFB8E4B40C /* GPBDictionary_PackagePrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = DD120B7A683C50623F2D70ACB691D30E /* GPBDictionary_PackagePrivate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		91C517C17F9BB2DCFAEF70B6DEF65BB2 /* GPBWireFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 08FD64A48EE22B8B96AC74D7B5F9ED9D /* GPBWireFormat.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		9A35ED45A637316CEA1A49BB8A0B5738 /* GPBWellKnownTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 6350E3F8D26F471341917F83FFA34173 /* GPBWellKnownTypes.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A390D37380843BD17AF3C9F558A52983 /* GPBUnknownField_PackagePrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E2A9FEFA9D13AEDC72FECE90E8ADF06 /* GPBUnknownField_PackagePrivate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A8A3DC5CF2CEA80EE91CCD1BC62B5F6A /* GPBDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 403E122259C6D09E8CA6642A34DFD387 /* GPBDictionary.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AA2B84E1DE2A093A3164D152A93219A7 /* GPBExtensionRegistry.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3145450B8C4DA84CE065BF8059AC12 /* GPBExtensionRegistry.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AC5A891519F88580EEB2DD73897A4727 /* GPBCodedOutputStream_PackagePrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F650B9F7CD0DFCCBE4F47028DA2A88B /* GPBCodedOutputStream_PackagePrivate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ACAB843AD00015A0483823056E284378 /* GPBRootObject_PackagePrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 4257DCAC74DB9528BE30D480C83A0614 /* GPBRootObject_PackagePrivate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AFA70A958AA5141122382F1C67ABB90D /* GPBUtilities_PackagePrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 5CD6A8E93072E973518F5B71F6F0228B /* GPBUtilities_PackagePrivate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B82FFCBF435F383CEC2A63A1CEF43412 /* GPBDescriptor.h in Headers */ = {isa = PBXBuildFile; fileRef = 6DF2B5848E0B8DD0038079C4F46E73D7 /* GPBDescriptor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B8C1C23B32F654347AB96DE13AF64781 /* GPBArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 79718FBF4F4C529E96266576E843738F /* GPBArray.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BE6C061F667A69A1214A7146895CAD5A /* GPBExtensionInternals.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E0E29E974A875544C2664856945600F /* GPBExtensionInternals.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C0BE19892DC4B7B013BE416330A83831 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E89CCC94F17EC560C78ED506CF416FAF /* Foundation.framework */; };
+		C11C2E3BFB66E71A78824E1F7958A6FE /* GPBArray_PackagePrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = AEDB2243A6CD346CDF0DB9A753A39090 /* GPBArray_PackagePrivate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C36D4BAC2B0569383B404F8E264F9641 /* GPBUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E63401A4016579D0174BC4CF2130180 /* GPBUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C4BB02A7A5783F68EB8818B31EEA4646 /* GPBProtocolBuffers_RuntimeSupport.h in Headers */ = {isa = PBXBuildFile; fileRef = 8952804670E9F30C536634A5CFBB8C7B /* GPBProtocolBuffers_RuntimeSupport.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C5C8BC2CEF5EFA8CCA880E26F79ECBC8 /* Pods-TheViralPages-tvOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B8D3DC9A372AADD38DB5725B4455FAEE /* Pods-TheViralPages-tvOS-dummy.m */; };
+		C5FBC50F16E6FDDC50B1A705D8935423 /* GPBMessage_PackagePrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 19E913B80F30C3E8FAAFEA39F93B2E2F /* GPBMessage_PackagePrivate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C941FF670AC8BB3E500A80F2D1F48B7F /* SourceContext.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = AC767302BE2740A218AB38624FAF415D /* SourceContext.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		CE793643063B71F80F32F0851FDABFA5 /* GTMLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E08BE5D6BE7BC2A5D25659901741F8D /* GTMLogger.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		D1B98003FB6E03BD9703AE053F6476E1 /* GPBDictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = C0B66BBE7A2E9B28EE087721F90D00F2 /* GPBDictionary.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D3E52F63896C97251CE06684BEA7314D /* GPBMessage_PackagePrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 19E913B80F30C3E8FAAFEA39F93B2E2F /* GPBMessage_PackagePrivate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D8C4C83DEB37903254C78E69D0ED9B6C /* GPBExtensionInternals.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E0E29E974A875544C2664856945600F /* GPBExtensionInternals.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		DA2A4C8DFA185C5EF30A05FAF1C50DC9 /* GPBArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 79718FBF4F4C529E96266576E843738F /* GPBArray.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DEC00112684AFDF2832E4E84B8DB3C02 /* GPBArray_PackagePrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = AEDB2243A6CD346CDF0DB9A753A39090 /* GPBArray_PackagePrivate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E0E411A97587C4A846F1595387F8E8D8 /* GPBUnknownField.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D59C3004FDCA38525EE2EC0EA6A86E7 /* GPBUnknownField.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E51A97E2492C5E8406B1FED40F58C511 /* GPBCodedInputStream_PackagePrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = BEE4D1E30EF324F593A1FC334C3C79D8 /* GPBCodedInputStream_PackagePrivate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E9827F9540F6625E6A6A11C4154D96A3 /* Api.pbobjc.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A51F2B567669037BF3936E5CA172E70 /* Api.pbobjc.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E99008C96F056077290E6996481FBA4E /* Pods-WordpressRN-tvOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F125A0AEF0E3356B16BF5BC608655664 /* Pods-WordpressRN-tvOS-dummy.m */; };
-		EABF16D805DD85A1D1272F6EF95F25B3 /* Empty.pbobjc.h in Headers */ = {isa = PBXBuildFile; fileRef = 7DB44A4D25E7DF53601657E9E2474251 /* Empty.pbobjc.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F19082784CB424C604F09CB3A8EA64B0 /* GPBCodedInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA04AC13CFC73F6CE9A4DED9CE97908 /* GPBCodedInputStream.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D062D327AC0D25EB3FD34E1873B1FE6C /* GPBUnknownFieldSet.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A6D92AEE6DA9E51EFEDB35B8CB850F /* GPBUnknownFieldSet.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D2FA3BDE830830F9A8D61C0ACAD6BC40 /* GPBCodedInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA04AC13CFC73F6CE9A4DED9CE97908 /* GPBCodedInputStream.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D578E1ECBDE65949D1FB0ACD813B66C2 /* GPBCodedInputStream_PackagePrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = BEE4D1E30EF324F593A1FC334C3C79D8 /* GPBCodedInputStream_PackagePrivate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D85DB486ABDFE32E977B664CE8357CDE /* GPBCodedOutputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 3144A339047FF93537D206919CD8123B /* GPBCodedOutputStream.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D932C8746CA676BBC4EB1FD5A8658440 /* Any.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 54C4EE1A27D31835838453206F2A58CD /* Any.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D944A28D50F11642AC002B66B215F513 /* Timestamp.pbobjc.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EF7A1D9262A7F997B1CB962C559EDFB /* Timestamp.pbobjc.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DCF8F34BD0686E4D15CDB6AD0592C9C9 /* GPBExtensionRegistry.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E536CB0A86E891E53BBBCE77E73737B /* GPBExtensionRegistry.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DEDFA629180E0156E49F6617D5CB4C33 /* Struct.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = EA487A96C086BF8484214DD55DCE2F2A /* Struct.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E3165A4D9D0F55F0606BE24245544F04 /* Any.pbobjc.h in Headers */ = {isa = PBXBuildFile; fileRef = 001E97685635E5E5D85137D15AC5F1EC /* Any.pbobjc.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E3A48DFF64B7B6FC6679B83A3396AB55 /* SourceContext.pbobjc.h in Headers */ = {isa = PBXBuildFile; fileRef = 83B4ABDC75BD3D90ED81B8E3493A181B /* SourceContext.pbobjc.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E6CA1A60EA67C8127A2D158BE30D13A7 /* GPBDictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = C0B66BBE7A2E9B28EE087721F90D00F2 /* GPBDictionary.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E86D69A9491A7A18F44C2840B248C178 /* GPBRootObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 9EA8A3C6BF5B08B278E78881E31D040D /* GPBRootObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EB7E3EC346A015D6E59C54DCD662D465 /* GPBUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2EA46D8AA4FAEA8F6A3270C49D6FFD /* GPBUtilities.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		ECA816C71D021C104A1605247DE87BF9 /* GPBCodedOutputStream.h in Headers */ = {isa = PBXBuildFile; fileRef = ED712B0D3871CCA85C312BC2282A4D51 /* GPBCodedOutputStream.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EEB672D286E729543DF2AEDB8C23FFC3 /* GPBUnknownField.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D59C3004FDCA38525EE2EC0EA6A86E7 /* GPBUnknownField.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F1B1695A6AB8AFEC306AB371F2DCA21F /* GTMNSData+zlib.m in Sources */ = {isa = PBXBuildFile; fileRef = 62EAF55A7EE5B2037B8244AFD62E4C61 /* GTMNSData+zlib.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		F79D69A657D9A6ED91BB4190CCA6F9C2 /* GPBRootObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 2587BF16BB234A7A454FB192744EEF0B /* GPBRootObject.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FDB9EBB305EEC4F49CD86DFFB52CFE4E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D48912B8B70552CB7E69D87039E4C2C /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		305A65F038047BAF20F1E481C17B7F95 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 4F870CFF1F9C07C89C0E0A13568AEB91;
-			remoteInfo = Protobuf;
-		};
-		C5B0B284F9D880DFFD924788EF624356 /* PBXContainerItemProxy */ = {
+		43215D9E801BF1EE2337826F7509002E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = FA9D13261AF395CF5D54BB3203DF2A6E;
 			remoteInfo = GoogleToolboxForMac;
 		};
+		8D14BF7BA2A31EFC7D7ACA4B9C6146C3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 473721C95F6478B60D0826564C4D008E;
+			remoteInfo = Protobuf;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		001E97685635E5E5D85137D15AC5F1EC /* Any.pbobjc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Any.pbobjc.h; path = objectivec/google/protobuf/Any.pbobjc.h; sourceTree = "<group>"; };
 		08FD64A48EE22B8B96AC74D7B5F9ED9D /* GPBWireFormat.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GPBWireFormat.m; path = objectivec/GPBWireFormat.m; sourceTree = "<group>"; };
-		09B114F96A07572D023C94DA8A602A24 /* libPods-WordpressRN-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-WordpressRN-tvOS.a"; path = "libPods-WordpressRN-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0E217AE0CD2E5500372D0178BD637F2A /* Pods-WordpressRN-tvOS-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-WordpressRN-tvOS-resources.sh"; sourceTree = "<group>"; };
-		0FB6C08216EE80B16B5A628D16CB0968 /* libPods-WordpressRN.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-WordpressRN.a"; path = "libPods-WordpressRN.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		12678477998C033F1E20696535904D0D /* Type.pbobjc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Type.pbobjc.h; path = objectivec/google/protobuf/Type.pbobjc.h; sourceTree = "<group>"; };
-		12C4271A2BCDC6E3FA7F5A1B745AC0AD /* libProtobuf.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libProtobuf.a; path = libProtobuf.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		138D9BFA57EC622839B5A4CCF3CAFECE /* Pods-WordpressRNTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WordpressRNTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		1618937E888411B5734B28440C9984BB /* GPBMessage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GPBMessage.h; path = objectivec/GPBMessage.h; sourceTree = "<group>"; };
 		19E913B80F30C3E8FAAFEA39F93B2E2F /* GPBMessage_PackagePrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GPBMessage_PackagePrivate.h; path = objectivec/GPBMessage_PackagePrivate.h; sourceTree = "<group>"; };
 		1A954DE546890C19A47689E7880DEB58 /* GPBDescriptor_PackagePrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GPBDescriptor_PackagePrivate.h; path = objectivec/GPBDescriptor_PackagePrivate.h; sourceTree = "<group>"; };
 		1C039443FDB80129B611548AD43B612D /* Duration.pbobjc.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = Duration.pbobjc.m; path = objectivec/google/protobuf/Duration.pbobjc.m; sourceTree = "<group>"; };
 		1EF7A1D9262A7F997B1CB962C559EDFB /* Timestamp.pbobjc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Timestamp.pbobjc.h; path = objectivec/google/protobuf/Timestamp.pbobjc.h; sourceTree = "<group>"; };
 		1FA04AC13CFC73F6CE9A4DED9CE97908 /* GPBCodedInputStream.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GPBCodedInputStream.m; path = objectivec/GPBCodedInputStream.m; sourceTree = "<group>"; };
-		20BEBCC74B0FEB71FF063A742B891E6A /* Pods-WordpressRN-tvOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WordpressRN-tvOS-acknowledgements.plist"; sourceTree = "<group>"; };
 		23DF27EFB5A4DDDC05A71D8BBF41D407 /* Protobuf-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Protobuf-prefix.pch"; sourceTree = "<group>"; };
-		2523EC0F95DBD6AED4F326315AF48080 /* Pods-WordpressRN.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WordpressRN.release.xcconfig"; sourceTree = "<group>"; };
 		2587BF16BB234A7A454FB192744EEF0B /* GPBRootObject.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GPBRootObject.m; path = objectivec/GPBRootObject.m; sourceTree = "<group>"; };
-		2AE71EF89478A0B58D680B65AAA6ACF5 /* Pods-WordpressRN-tvOSTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-WordpressRN-tvOSTests-resources.sh"; sourceTree = "<group>"; };
 		2BCA419DEE41C61FAEB2F6CF8AE135CA /* GPBArray.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GPBArray.m; path = objectivec/GPBArray.m; sourceTree = "<group>"; };
 		2BCD98927E2E636FDB3DD76DF0E71CFF /* FieldMask.pbobjc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FieldMask.pbobjc.h; path = objectivec/google/protobuf/FieldMask.pbobjc.h; sourceTree = "<group>"; };
-		2CACEF8F5226840A9413ED12EADE9470 /* Pods-WordpressRNTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-WordpressRNTests-frameworks.sh"; sourceTree = "<group>"; };
 		2E2A9FEFA9D13AEDC72FECE90E8ADF06 /* GPBUnknownField_PackagePrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GPBUnknownField_PackagePrivate.h; path = objectivec/GPBUnknownField_PackagePrivate.h; sourceTree = "<group>"; };
 		2E3145450B8C4DA84CE065BF8059AC12 /* GPBExtensionRegistry.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GPBExtensionRegistry.m; path = objectivec/GPBExtensionRegistry.m; sourceTree = "<group>"; };
 		2E536CB0A86E891E53BBBCE77E73737B /* GPBExtensionRegistry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GPBExtensionRegistry.h; path = objectivec/GPBExtensionRegistry.h; sourceTree = "<group>"; };
-		2FB600EC40B60520EDF8922F2E76DABF /* Pods-WordpressRN-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WordpressRN-acknowledgements.plist"; sourceTree = "<group>"; };
-		311D48969B5D60689AA21446CEF206EB /* Pods-WordpressRN-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-WordpressRN-frameworks.sh"; sourceTree = "<group>"; };
 		3144A339047FF93537D206919CD8123B /* GPBCodedOutputStream.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GPBCodedOutputStream.m; path = objectivec/GPBCodedOutputStream.m; sourceTree = "<group>"; };
 		36D1B1AABDB953FBA64CFE848B4AFC09 /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseInstanceID.framework; path = Frameworks/FirebaseInstanceID.framework; sourceTree = "<group>"; };
 		37AB8523D4B5F7828206A8D829687D3F /* GoogleToolboxForMac-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GoogleToolboxForMac-prefix.pch"; sourceTree = "<group>"; };
+		39EAF558ED4CAFFE1144CD7FABF19BEC /* Pods-TheViralPages-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TheViralPages-acknowledgements.plist"; sourceTree = "<group>"; };
 		3A48D3AFA32C77CF2B0E0EF95B65114B /* Type.pbobjc.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = Type.pbobjc.m; path = objectivec/google/protobuf/Type.pbobjc.m; sourceTree = "<group>"; };
-		3A5037E5B1DA52F65D65DBB76983A34A /* Pods-WordpressRN-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WordpressRN-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		3C5FFA7382C895811E3B0023C0F41A23 /* GPBDescriptor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GPBDescriptor.m; path = objectivec/GPBDescriptor.m; sourceTree = "<group>"; };
+		3FDFABA71A83DCDEF35AA9794B6FE57F /* Pods-TheViralPages-tvOS-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TheViralPages-tvOS-resources.sh"; sourceTree = "<group>"; };
 		403E122259C6D09E8CA6642A34DFD387 /* GPBDictionary.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GPBDictionary.m; path = objectivec/GPBDictionary.m; sourceTree = "<group>"; };
 		4257DCAC74DB9528BE30D480C83A0614 /* GPBRootObject_PackagePrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GPBRootObject_PackagePrivate.h; path = objectivec/GPBRootObject_PackagePrivate.h; sourceTree = "<group>"; };
+		465BAC6ADBBDD195280EA89DBDA8AB56 /* Pods-TheViralPages-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TheViralPages-frameworks.sh"; sourceTree = "<group>"; };
 		49742342001E384A48A41292E56FCF35 /* FieldMask.pbobjc.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FieldMask.pbobjc.m; path = objectivec/google/protobuf/FieldMask.pbobjc.m; sourceTree = "<group>"; };
 		4985912EC58108202C6D3C1DE1C43152 /* Protobuf.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Protobuf.xcconfig; sourceTree = "<group>"; };
-		4DDF113E22B6D280239F9AA3298F983C /* Pods-WordpressRN-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WordpressRN-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		51C243B55980FC2212F1BD6D4D2F1631 /* libPods-TheViralPages.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-TheViralPages.a"; path = "libPods-TheViralPages.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		540B2D2CBD1C17660F3ED370958484B8 /* GPBBootstrap.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GPBBootstrap.h; path = objectivec/GPBBootstrap.h; sourceTree = "<group>"; };
 		54C4EE1A27D31835838453206F2A58CD /* Any.pbobjc.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = Any.pbobjc.m; path = objectivec/google/protobuf/Any.pbobjc.m; sourceTree = "<group>"; };
 		560DFBB8666AEC35F6725B87070327EF /* Empty.pbobjc.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = Empty.pbobjc.m; path = objectivec/google/protobuf/Empty.pbobjc.m; sourceTree = "<group>"; };
-		5851BC98A7732B98E5EA9CCF288A87D6 /* Pods-WordpressRN-tvOSTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WordpressRN-tvOSTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		5BA5AB428C2D295297C0CBE319E2DBB2 /* Pods-WordpressRN-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-WordpressRN-resources.sh"; sourceTree = "<group>"; };
-		5BEE8EEC22D754AA8124244EB8387E2E /* Pods-WordpressRNTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WordpressRNTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5CD6A8E93072E973518F5B71F6F0228B /* GPBUtilities_PackagePrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GPBUtilities_PackagePrivate.h; path = objectivec/GPBUtilities_PackagePrivate.h; sourceTree = "<group>"; };
+		62D060D9413DC58F206D27C65C2B3674 /* Pods-TheViralPages-tvOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TheViralPages-tvOS-acknowledgements.markdown"; sourceTree = "<group>"; };
 		62EAF55A7EE5B2037B8244AFD62E4C61 /* GTMNSData+zlib.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "GTMNSData+zlib.m"; path = "Foundation/GTMNSData+zlib.m"; sourceTree = "<group>"; };
 		6350E3F8D26F471341917F83FFA34173 /* GPBWellKnownTypes.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GPBWellKnownTypes.m; path = objectivec/GPBWellKnownTypes.m; sourceTree = "<group>"; };
 		66511A40A137AF4ED38BD50124E409C3 /* Wrappers.pbobjc.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = Wrappers.pbobjc.m; path = objectivec/google/protobuf/Wrappers.pbobjc.m; sourceTree = "<group>"; };
-		6B537B1D8645A65ACE19082A878B2483 /* Pods-WordpressRN-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WordpressRN-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		6C3F5FE155294108B2C460C2EC7F5905 /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAnalytics.framework; path = Frameworks/FirebaseAnalytics.framework; sourceTree = "<group>"; };
 		6DF2B5848E0B8DD0038079C4F46E73D7 /* GPBDescriptor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GPBDescriptor.h; path = objectivec/GPBDescriptor.h; sourceTree = "<group>"; };
-		77BB2BA6554DC232B9076B8B586CEC4F /* libGoogleToolboxForMac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libGoogleToolboxForMac.a; path = libGoogleToolboxForMac.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		79718FBF4F4C529E96266576E843738F /* GPBArray.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GPBArray.h; path = objectivec/GPBArray.h; sourceTree = "<group>"; };
 		7A51F2B567669037BF3936E5CA172E70 /* Api.pbobjc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Api.pbobjc.h; path = objectivec/google/protobuf/Api.pbobjc.h; sourceTree = "<group>"; };
 		7D59C3004FDCA38525EE2EC0EA6A86E7 /* GPBUnknownField.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GPBUnknownField.h; path = objectivec/GPBUnknownField.h; sourceTree = "<group>"; };
 		7DB44A4D25E7DF53601657E9E2474251 /* Empty.pbobjc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Empty.pbobjc.h; path = objectivec/google/protobuf/Empty.pbobjc.h; sourceTree = "<group>"; };
 		83B4ABDC75BD3D90ED81B8E3493A181B /* SourceContext.pbobjc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SourceContext.pbobjc.h; path = objectivec/google/protobuf/SourceContext.pbobjc.h; sourceTree = "<group>"; };
-		87BE4D1D5A5716A3DD17743CA555D4B0 /* Pods-WordpressRNTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-WordpressRNTests-resources.sh"; sourceTree = "<group>"; };
+		859CD403CE54B7631B517FB3ABF31865 /* libProtobuf.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libProtobuf.a; path = libProtobuf.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		8952804670E9F30C536634A5CFBB8C7B /* GPBProtocolBuffers_RuntimeSupport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GPBProtocolBuffers_RuntimeSupport.h; path = objectivec/GPBProtocolBuffers_RuntimeSupport.h; sourceTree = "<group>"; };
-		89E6AAB5F22DED845B03B9C36E2DB737 /* Pods-WordpressRN-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WordpressRN-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		8F650B9F7CD0DFCCBE4F47028DA2A88B /* GPBCodedOutputStream_PackagePrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GPBCodedOutputStream_PackagePrivate.h; path = objectivec/GPBCodedOutputStream_PackagePrivate.h; sourceTree = "<group>"; };
 		8F99A74D0E82B0121B23C7A46C9F460B /* FirebaseMessaging.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseMessaging.framework; path = Frameworks/FirebaseMessaging.framework; sourceTree = "<group>"; };
-		909988D2C88E9F2736D1996B417C9583 /* Pods-WordpressRNTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WordpressRNTests.release.xcconfig"; sourceTree = "<group>"; };
+		8FF048C63E06C31BFA35B0C5F9E6E697 /* Pods-TheViralPages-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TheViralPages-acknowledgements.markdown"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		940EE29FDADCD0278EA36EABCDEAF7C3 /* Pods-WordpressRN-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WordpressRN-acknowledgements.markdown"; sourceTree = "<group>"; };
+		9677EA353DAF5C68E941E3EB43AF9D66 /* Pods-TheViralPages-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TheViralPages-dummy.m"; sourceTree = "<group>"; };
 		9D48912B8B70552CB7E69D87039E4C2C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		9DE275DB0D87F225E7F0C4B9BE782BD5 /* Pods-WordpressRNTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WordpressRNTests-dummy.m"; sourceTree = "<group>"; };
 		9E08BE5D6BE7BC2A5D25659901741F8D /* GTMLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTMLogger.m; path = Foundation/GTMLogger.m; sourceTree = "<group>"; };
 		9E0E29E974A875544C2664856945600F /* GPBExtensionInternals.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GPBExtensionInternals.m; path = objectivec/GPBExtensionInternals.m; sourceTree = "<group>"; };
 		9E63401A4016579D0174BC4CF2130180 /* GPBUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GPBUtilities.h; path = objectivec/GPBUtilities.h; sourceTree = "<group>"; };
 		9EA8A3C6BF5B08B278E78881E31D040D /* GPBRootObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GPBRootObject.h; path = objectivec/GPBRootObject.h; sourceTree = "<group>"; };
-		9ECA8488F33EB3550F968AB7DA0FF3AF /* Pods-WordpressRNTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WordpressRNTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		9EB23DADE269B646BD025B9435BC8C7D /* libPods-TheViralPages-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-TheViralPages-tvOS.a"; path = "libPods-TheViralPages-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FE01C0885F4C0235FE15152DD46C589 /* GPBProtocolBuffers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GPBProtocolBuffers.h; path = objectivec/GPBProtocolBuffers.h; sourceTree = "<group>"; };
+		A685AA1EF4AEBF8208F563AB40DEB095 /* Pods-TheViralPages-tvOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TheViralPages-tvOS-acknowledgements.plist"; sourceTree = "<group>"; };
 		A7ED402B02A8F914913B199E8524129B /* GPBMessage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GPBMessage.m; path = objectivec/GPBMessage.m; sourceTree = "<group>"; };
 		AAE41CCD2EF876A2901422565A318450 /* GPBUnknownFieldSet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GPBUnknownFieldSet.h; path = objectivec/GPBUnknownFieldSet.h; sourceTree = "<group>"; };
 		AB05DC9372EAA60C5C0E92E232197796 /* GTMDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
 		AC767302BE2740A218AB38624FAF415D /* SourceContext.pbobjc.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SourceContext.pbobjc.m; path = objectivec/google/protobuf/SourceContext.pbobjc.m; sourceTree = "<group>"; };
 		AEDB2243A6CD346CDF0DB9A753A39090 /* GPBArray_PackagePrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GPBArray_PackagePrivate.h; path = objectivec/GPBArray_PackagePrivate.h; sourceTree = "<group>"; };
 		AF2EA46D8AA4FAEA8F6A3270C49D6FFD /* GPBUtilities.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GPBUtilities.m; path = objectivec/GPBUtilities.m; sourceTree = "<group>"; };
-		B12E6FA54937C10374AED002D0A4C938 /* Pods-WordpressRN-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WordpressRN-dummy.m"; sourceTree = "<group>"; };
 		B2A6D92AEE6DA9E51EFEDB35B8CB850F /* GPBUnknownFieldSet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GPBUnknownFieldSet.m; path = objectivec/GPBUnknownFieldSet.m; sourceTree = "<group>"; };
-		B2ABFE8ABC440D790936AE086DFC4F09 /* libPods-WordpressRNTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-WordpressRNTests.a"; path = "libPods-WordpressRNTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5D730424C36A9D0BB12473678C5C609 /* GTMNSData+zlib.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "GTMNSData+zlib.h"; path = "Foundation/GTMNSData+zlib.h"; sourceTree = "<group>"; };
+		B8D3DC9A372AADD38DB5725B4455FAEE /* Pods-TheViralPages-tvOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TheViralPages-tvOS-dummy.m"; sourceTree = "<group>"; };
 		B9DB2913D1A90A71CF70E840F03289A9 /* Struct.pbobjc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Struct.pbobjc.h; path = objectivec/google/protobuf/Struct.pbobjc.h; sourceTree = "<group>"; };
+		BC460BA71171FE573D4729E5030A9C99 /* libGoogleToolboxForMac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libGoogleToolboxForMac.a; path = libGoogleToolboxForMac.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEE4D1E30EF324F593A1FC334C3C79D8 /* GPBCodedInputStream_PackagePrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GPBCodedInputStream_PackagePrivate.h; path = objectivec/GPBCodedInputStream_PackagePrivate.h; sourceTree = "<group>"; };
 		C0317CC4332742F7BBFD8954FFEF65EA /* Protobuf-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Protobuf-dummy.m"; sourceTree = "<group>"; };
 		C0B66BBE7A2E9B28EE087721F90D00F2 /* GPBDictionary.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GPBDictionary.h; path = objectivec/GPBDictionary.h; sourceTree = "<group>"; };
 		C0F15AF57D88CBECACCD6280434B04F4 /* GPBRuntimeTypes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GPBRuntimeTypes.h; path = objectivec/GPBRuntimeTypes.h; sourceTree = "<group>"; };
-		C173B32C72241D6D5C932233FDBDA776 /* Pods-WordpressRN.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WordpressRN.debug.xcconfig"; sourceTree = "<group>"; };
-		C8A64AA841BB50185140ADFF4EFFFD63 /* Pods-WordpressRN-tvOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WordpressRN-tvOS-acknowledgements.markdown"; sourceTree = "<group>"; };
-		CA44BAA191B507F8664CDFD9F9B7C1BB /* libPods-WordpressRN-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-WordpressRN-tvOSTests.a"; path = "libPods-WordpressRN-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C999E1A96F7E6F6E690E6882743797BB /* Pods-TheViralPages-tvOS-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TheViralPages-tvOS-frameworks.sh"; sourceTree = "<group>"; };
 		CC776ACF734C9EAD15DA52BA321A061C /* GPBUnknownField.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GPBUnknownField.m; path = objectivec/GPBUnknownField.m; sourceTree = "<group>"; };
 		CCCC637CB53D0538C2506E95224E1257 /* GPBCodedInputStream.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GPBCodedInputStream.h; path = objectivec/GPBCodedInputStream.h; sourceTree = "<group>"; };
 		CE503410B599E7B4E0E4A35111B6C154 /* GoogleToolboxForMac-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GoogleToolboxForMac-dummy.m"; sourceTree = "<group>"; };
-		CEC3B9332A044425048E4C721EEF5701 /* Pods-WordpressRN-tvOSTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WordpressRN-tvOSTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		D0E3C0AE7B4A4B4ACDC5F2326D5A5C5B /* Pods-WordpressRN-tvOS-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-WordpressRN-tvOS-frameworks.sh"; sourceTree = "<group>"; };
 		D53670FAA6E1718A718B2DEC4A0D5961 /* Duration.pbobjc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Duration.pbobjc.h; path = objectivec/google/protobuf/Duration.pbobjc.h; sourceTree = "<group>"; };
 		DD120B7A683C50623F2D70ACB691D30E /* GPBDictionary_PackagePrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GPBDictionary_PackagePrivate.h; path = objectivec/GPBDictionary_PackagePrivate.h; sourceTree = "<group>"; };
 		DD7791BE8EB96D30317E4AA74D170EBD /* GPBUnknownFieldSet_PackagePrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GPBUnknownFieldSet_PackagePrivate.h; path = objectivec/GPBUnknownFieldSet_PackagePrivate.h; sourceTree = "<group>"; };
 		DDB00209ED19EF6316064EEA3E014E71 /* Api.pbobjc.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = Api.pbobjc.m; path = objectivec/google/protobuf/Api.pbobjc.m; sourceTree = "<group>"; };
 		DF3EBD0AB922CCB3EEA466256111AD6E /* GPBWireFormat.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GPBWireFormat.h; path = objectivec/GPBWireFormat.h; sourceTree = "<group>"; };
 		E02229F0115D720F63F7F4792EF69F97 /* GoogleToolboxForMac.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GoogleToolboxForMac.xcconfig; sourceTree = "<group>"; };
-		E0ED4F3FC3971D90F5C1AF32D4D81F32 /* Pods-WordpressRN-tvOSTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WordpressRN-tvOSTests-dummy.m"; sourceTree = "<group>"; };
 		E86D866E7527079B9C72838146FC65E0 /* GTMLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTMLogger.h; path = Foundation/GTMLogger.h; sourceTree = "<group>"; };
 		E89CCC94F17EC560C78ED506CF416FAF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		E8B253C8D07DE1B8E7DBD2B40D122B2D /* FirebaseCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseCore.framework; path = Frameworks/FirebaseCore.framework; sourceTree = "<group>"; };
+		E92A46FB45984B21DCEC7508C1E57E9B /* Pods-TheViralPages.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TheViralPages.release.xcconfig"; sourceTree = "<group>"; };
 		EA487A96C086BF8484214DD55DCE2F2A /* Struct.pbobjc.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = Struct.pbobjc.m; path = objectivec/google/protobuf/Struct.pbobjc.m; sourceTree = "<group>"; };
 		EB0EE329D8FF6EA2AF9AC450D83516C7 /* Wrappers.pbobjc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Wrappers.pbobjc.h; path = objectivec/google/protobuf/Wrappers.pbobjc.h; sourceTree = "<group>"; };
 		ED712B0D3871CCA85C312BC2282A4D51 /* GPBCodedOutputStream.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GPBCodedOutputStream.h; path = objectivec/GPBCodedOutputStream.h; sourceTree = "<group>"; };
-		F125A0AEF0E3356B16BF5BC608655664 /* Pods-WordpressRN-tvOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WordpressRN-tvOS-dummy.m"; sourceTree = "<group>"; };
+		EFEE4BA1B0CD6919F7450875F7077761 /* Pods-TheViralPages-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TheViralPages-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		F3DECD9A47AF111EF1C5751D3FD334BE /* Pods-TheViralPages-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TheViralPages-resources.sh"; sourceTree = "<group>"; };
+		F6CF4024F3A12ADBEBD3EBB900DC41F0 /* Pods-TheViralPages-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TheViralPages-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		F84B3D5AD2479682F40C1B1C205CD658 /* Firebase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Firebase.h; path = Core/Sources/Firebase.h; sourceTree = "<group>"; };
 		F935CCABB5F02337BDDE8E5F38F3069D /* GPBExtensionInternals.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GPBExtensionInternals.h; path = objectivec/GPBExtensionInternals.h; sourceTree = "<group>"; };
-		F9D27FD6CF5BA8FA3330B966D2FF3952 /* Pods-WordpressRN-tvOSTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-WordpressRN-tvOSTests-frameworks.sh"; sourceTree = "<group>"; };
+		FB65E47D19EDD15B477D7BFFF1840ECE /* Pods-TheViralPages.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TheViralPages.debug.xcconfig"; sourceTree = "<group>"; };
 		FBC167413116C6A3D5CB6A6FF890684A /* GPBWellKnownTypes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GPBWellKnownTypes.h; path = objectivec/GPBWellKnownTypes.h; sourceTree = "<group>"; };
 		FFB0B082A039C59F90E978F02C6326E5 /* Timestamp.pbobjc.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = Timestamp.pbobjc.m; path = objectivec/google/protobuf/Timestamp.pbobjc.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1C52433F42DC4141F5D2B41971A9DD9D /* Frameworks */ = {
+		66632E93529D7622EC7623A1A100B672 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B601B0E5A89BF173EADCC2A123A9013 /* Foundation.framework in Frameworks */,
+				5D1978476CBCE1CAE2172D83B330C7F8 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,35 +220,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A36F9EC806EA4706E8D53D963E737863 /* Frameworks */ = {
+		C623DC1DF7DFC7E67618168C8B40E632 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AAC7AAA9CA57C08B65A7E26E3B7B9ED8 /* Foundation.framework in Frameworks */,
+				C0BE19892DC4B7B013BE416330A83831 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B55D41E498417B2E4715F743DCA02341 /* Frameworks */ = {
+		D5590D5248CAF4785C54443E1FB17B54 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				766C6CDE0136D51167861496B2A7E4B5 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CD2183A2220ABF8104E70CBFDD87A87E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5CFD7E3CCED1C8DDAEC0FCE36F9F2E39 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DBFC9697791410C2B8599C1774D3E23D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				806D5B079621648BB24CE9FA54B1DB55 /* Foundation.framework in Frameworks */,
+				FDB9EBB305EEC4F49CD86DFFB52CFE4E /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,6 +330,15 @@
 			path = FirebaseMessaging;
 			sourceTree = "<group>";
 		};
+		6583461C8BBB0C11090AA6A56600A9D6 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				DC54621B2DA2BA6CB6F8F703EF7E21FD /* Pods-TheViralPages */,
+				8E1BAE00013688BF9B9689D4E0534FE4 /* Pods-TheViralPages-tvOS */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
 		71702E9F6CB7EAB64093403F926DFD91 /* FirebaseAnalytics */ = {
 			isa = PBXGroup;
 			children = (
@@ -460,24 +433,35 @@
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				A42F72DC1D780481325DD00969B19BB6 /* Frameworks */,
 				30EF295669D4BF8BD0005016018B2179 /* Pods */,
-				E1C471D555996CDBF3AA28458A95080C /* Products */,
-				B1F7E67E591F6A1F30D024511656AE37 /* Targets Support Files */,
+				819E404F7D9384D3482DB05C69B93105 /* Products */,
+				6583461C8BBB0C11090AA6A56600A9D6 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		8BC972DBF6B434824D2942633C77D222 /* Pods-WordpressRNTests */ = {
+		819E404F7D9384D3482DB05C69B93105 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9ECA8488F33EB3550F968AB7DA0FF3AF /* Pods-WordpressRNTests-acknowledgements.markdown */,
-				138D9BFA57EC622839B5A4CCF3CAFECE /* Pods-WordpressRNTests-acknowledgements.plist */,
-				9DE275DB0D87F225E7F0C4B9BE782BD5 /* Pods-WordpressRNTests-dummy.m */,
-				2CACEF8F5226840A9413ED12EADE9470 /* Pods-WordpressRNTests-frameworks.sh */,
-				87BE4D1D5A5716A3DD17743CA555D4B0 /* Pods-WordpressRNTests-resources.sh */,
-				5BEE8EEC22D754AA8124244EB8387E2E /* Pods-WordpressRNTests.debug.xcconfig */,
-				909988D2C88E9F2736D1996B417C9583 /* Pods-WordpressRNTests.release.xcconfig */,
+				BC460BA71171FE573D4729E5030A9C99 /* libGoogleToolboxForMac.a */,
+				51C243B55980FC2212F1BD6D4D2F1631 /* libPods-TheViralPages.a */,
+				9EB23DADE269B646BD025B9435BC8C7D /* libPods-TheViralPages-tvOS.a */,
+				859CD403CE54B7631B517FB3ABF31865 /* libProtobuf.a */,
 			);
-			name = "Pods-WordpressRNTests";
-			path = "Target Support Files/Pods-WordpressRNTests";
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8E1BAE00013688BF9B9689D4E0534FE4 /* Pods-TheViralPages-tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				62D060D9413DC58F206D27C65C2B3674 /* Pods-TheViralPages-tvOS-acknowledgements.markdown */,
+				A685AA1EF4AEBF8208F563AB40DEB095 /* Pods-TheViralPages-tvOS-acknowledgements.plist */,
+				B8D3DC9A372AADD38DB5725B4455FAEE /* Pods-TheViralPages-tvOS-dummy.m */,
+				C999E1A96F7E6F6E690E6882743797BB /* Pods-TheViralPages-tvOS-frameworks.sh */,
+				3FDFABA71A83DCDEF35AA9794B6FE57F /* Pods-TheViralPages-tvOS-resources.sh */,
+				F6CF4024F3A12ADBEBD3EBB900DC41F0 /* Pods-TheViralPages-tvOS.debug.xcconfig */,
+				EFEE4BA1B0CD6919F7450875F7077761 /* Pods-TheViralPages-tvOS.release.xcconfig */,
+			);
+			name = "Pods-TheViralPages-tvOS";
+			path = "Target Support Files/Pods-TheViralPages-tvOS";
 			sourceTree = "<group>";
 		};
 		951560038475051860FDE2F5E2095077 /* Frameworks */ = {
@@ -495,17 +479,6 @@
 				B95AAC6DF73A3AFC4B77A363C70E8A09 /* tvOS */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		B1F7E67E591F6A1F30D024511656AE37 /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				DD94E8F2A9C842F6068AE63F5DC29EE7 /* Pods-WordpressRN */,
-				FF42363ED22F05BBA2007AD2F4C33408 /* Pods-WordpressRN-tvOS */,
-				FB0959B89722ECBAF9884BA1222E5E38 /* Pods-WordpressRN-tvOSTests */,
-				8BC972DBF6B434824D2942633C77D222 /* Pods-WordpressRNTests */,
-			);
-			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
 		B2D79266F48ABA0F006CBD61273BF1C4 /* Frameworks */ = {
@@ -533,32 +506,19 @@
 			name = "NSData+zlib";
 			sourceTree = "<group>";
 		};
-		DD94E8F2A9C842F6068AE63F5DC29EE7 /* Pods-WordpressRN */ = {
+		DC54621B2DA2BA6CB6F8F703EF7E21FD /* Pods-TheViralPages */ = {
 			isa = PBXGroup;
 			children = (
-				940EE29FDADCD0278EA36EABCDEAF7C3 /* Pods-WordpressRN-acknowledgements.markdown */,
-				2FB600EC40B60520EDF8922F2E76DABF /* Pods-WordpressRN-acknowledgements.plist */,
-				B12E6FA54937C10374AED002D0A4C938 /* Pods-WordpressRN-dummy.m */,
-				311D48969B5D60689AA21446CEF206EB /* Pods-WordpressRN-frameworks.sh */,
-				5BA5AB428C2D295297C0CBE319E2DBB2 /* Pods-WordpressRN-resources.sh */,
-				C173B32C72241D6D5C932233FDBDA776 /* Pods-WordpressRN.debug.xcconfig */,
-				2523EC0F95DBD6AED4F326315AF48080 /* Pods-WordpressRN.release.xcconfig */,
+				8FF048C63E06C31BFA35B0C5F9E6E697 /* Pods-TheViralPages-acknowledgements.markdown */,
+				39EAF558ED4CAFFE1144CD7FABF19BEC /* Pods-TheViralPages-acknowledgements.plist */,
+				9677EA353DAF5C68E941E3EB43AF9D66 /* Pods-TheViralPages-dummy.m */,
+				465BAC6ADBBDD195280EA89DBDA8AB56 /* Pods-TheViralPages-frameworks.sh */,
+				F3DECD9A47AF111EF1C5751D3FD334BE /* Pods-TheViralPages-resources.sh */,
+				FB65E47D19EDD15B477D7BFFF1840ECE /* Pods-TheViralPages.debug.xcconfig */,
+				E92A46FB45984B21DCEC7508C1E57E9B /* Pods-TheViralPages.release.xcconfig */,
 			);
-			name = "Pods-WordpressRN";
-			path = "Target Support Files/Pods-WordpressRN";
-			sourceTree = "<group>";
-		};
-		E1C471D555996CDBF3AA28458A95080C /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				77BB2BA6554DC232B9076B8B586CEC4F /* libGoogleToolboxForMac.a */,
-				0FB6C08216EE80B16B5A628D16CB0968 /* libPods-WordpressRN.a */,
-				09B114F96A07572D023C94DA8A602A24 /* libPods-WordpressRN-tvOS.a */,
-				CA44BAA191B507F8664CDFD9F9B7C1BB /* libPods-WordpressRN-tvOSTests.a */,
-				B2ABFE8ABC440D790936AE086DFC4F09 /* libPods-WordpressRNTests.a */,
-				12C4271A2BCDC6E3FA7F5A1B745AC0AD /* libProtobuf.a */,
-			);
-			name = Products;
+			name = "Pods-TheViralPages";
+			path = "Target Support Files/Pods-TheViralPages";
 			sourceTree = "<group>";
 		};
 		EC3CE45745761B95D10E8E9F2908FD08 /* Support Files */ = {
@@ -595,36 +555,6 @@
 			path = "../Target Support Files/Protobuf";
 			sourceTree = "<group>";
 		};
-		FB0959B89722ECBAF9884BA1222E5E38 /* Pods-WordpressRN-tvOSTests */ = {
-			isa = PBXGroup;
-			children = (
-				5851BC98A7732B98E5EA9CCF288A87D6 /* Pods-WordpressRN-tvOSTests-acknowledgements.markdown */,
-				CEC3B9332A044425048E4C721EEF5701 /* Pods-WordpressRN-tvOSTests-acknowledgements.plist */,
-				E0ED4F3FC3971D90F5C1AF32D4D81F32 /* Pods-WordpressRN-tvOSTests-dummy.m */,
-				F9D27FD6CF5BA8FA3330B966D2FF3952 /* Pods-WordpressRN-tvOSTests-frameworks.sh */,
-				2AE71EF89478A0B58D680B65AAA6ACF5 /* Pods-WordpressRN-tvOSTests-resources.sh */,
-				4DDF113E22B6D280239F9AA3298F983C /* Pods-WordpressRN-tvOSTests.debug.xcconfig */,
-				6B537B1D8645A65ACE19082A878B2483 /* Pods-WordpressRN-tvOSTests.release.xcconfig */,
-			);
-			name = "Pods-WordpressRN-tvOSTests";
-			path = "Target Support Files/Pods-WordpressRN-tvOSTests";
-			sourceTree = "<group>";
-		};
-		FF42363ED22F05BBA2007AD2F4C33408 /* Pods-WordpressRN-tvOS */ = {
-			isa = PBXGroup;
-			children = (
-				C8A64AA841BB50185140ADFF4EFFFD63 /* Pods-WordpressRN-tvOS-acknowledgements.markdown */,
-				20BEBCC74B0FEB71FF063A742B891E6A /* Pods-WordpressRN-tvOS-acknowledgements.plist */,
-				F125A0AEF0E3356B16BF5BC608655664 /* Pods-WordpressRN-tvOS-dummy.m */,
-				D0E3C0AE7B4A4B4ACDC5F2326D5A5C5B /* Pods-WordpressRN-tvOS-frameworks.sh */,
-				0E217AE0CD2E5500372D0178BD637F2A /* Pods-WordpressRN-tvOS-resources.sh */,
-				3A5037E5B1DA52F65D65DBB76983A34A /* Pods-WordpressRN-tvOS.debug.xcconfig */,
-				89E6AAB5F22DED845B03B9C36E2DB737 /* Pods-WordpressRN-tvOS.release.xcconfig */,
-			);
-			name = "Pods-WordpressRN-tvOS";
-			path = "Target Support Files/Pods-WordpressRN-tvOS";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -638,95 +568,77 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C9C78164AC12B046FFCD241B032030DF /* Headers */ = {
+		F0581525C90A269C8B705234EAEA5433 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2279F41043ABA1ED2A0D9D4EB6A9237F /* Any.pbobjc.h in Headers */,
-				E9827F9540F6625E6A6A11C4154D96A3 /* Api.pbobjc.h in Headers */,
-				124FB32A195D60E37C3662C9424BAA6B /* Duration.pbobjc.h in Headers */,
-				EABF16D805DD85A1D1272F6EF95F25B3 /* Empty.pbobjc.h in Headers */,
-				7CCA9361D28E0E90961FCA8BD58F65E7 /* FieldMask.pbobjc.h in Headers */,
-				DA2A4C8DFA185C5EF30A05FAF1C50DC9 /* GPBArray.h in Headers */,
-				DEC00112684AFDF2832E4E84B8DB3C02 /* GPBArray_PackagePrivate.h in Headers */,
-				5C5AD83B235C811E99C4963A6BDA8D1C /* GPBBootstrap.h in Headers */,
-				8DBF896782C7D52D7A99A8ADF1BA794A /* GPBCodedInputStream.h in Headers */,
-				E51A97E2492C5E8406B1FED40F58C511 /* GPBCodedInputStream_PackagePrivate.h in Headers */,
-				22B5ACDF58B8C241C26BCC25345FF0CA /* GPBCodedOutputStream.h in Headers */,
-				59458B8980A9728F3095835DEBD22F1F /* GPBCodedOutputStream_PackagePrivate.h in Headers */,
-				71EC6C5A9DD70AFB4B9C7AA403775F44 /* GPBDescriptor.h in Headers */,
-				244EA14AE01FDDBAA4D5309CF5EE4F4F /* GPBDescriptor_PackagePrivate.h in Headers */,
-				D1B98003FB6E03BD9703AE053F6476E1 /* GPBDictionary.h in Headers */,
-				CBEFF3371040E768A2364DDFB8E4B40C /* GPBDictionary_PackagePrivate.h in Headers */,
-				9D9904D21680615FCA43886CC0577574 /* GPBExtensionInternals.h in Headers */,
-				B54EE3873BE552E71F47178C91D76C33 /* GPBExtensionRegistry.h in Headers */,
-				5D0631F759CDFB66DA22435A0432E650 /* GPBMessage.h in Headers */,
-				D3E52F63896C97251CE06684BEA7314D /* GPBMessage_PackagePrivate.h in Headers */,
-				328F0CF4BCBD25E647AE8EF7ED3A266F /* GPBProtocolBuffers.h in Headers */,
-				7238BE463EA6C287AE9F69F652A49075 /* GPBProtocolBuffers_RuntimeSupport.h in Headers */,
-				B10DFBB42D48B6D9274F27019E66EBEB /* GPBRootObject.h in Headers */,
-				12812544AD61D035E2F250EBF780E666 /* GPBRootObject_PackagePrivate.h in Headers */,
-				4E17A7CB37CFD8305A338A4A945F93B1 /* GPBRuntimeTypes.h in Headers */,
-				E0E411A97587C4A846F1595387F8E8D8 /* GPBUnknownField.h in Headers */,
-				A0969F529715EC9E59D9AB71CEB6D561 /* GPBUnknownField_PackagePrivate.h in Headers */,
-				A2E534861D11F7E022958F7998CA37A2 /* GPBUnknownFieldSet.h in Headers */,
-				5A10EAC81B77870F271D6C914D3EE77B /* GPBUnknownFieldSet_PackagePrivate.h in Headers */,
-				0ADDCEBEADB49AE70A0D9F7D9023D1B1 /* GPBUtilities.h in Headers */,
-				1848C113058A69EAD4C5AE21189D06AD /* GPBUtilities_PackagePrivate.h in Headers */,
-				089CD5D3D13F373218B4DDC049465FD8 /* GPBWellKnownTypes.h in Headers */,
-				94599A6BCBF3780AEC409EBCFB0AA199 /* GPBWireFormat.h in Headers */,
-				1375E7BBCAA9E2FB9FEA4E3562FDEDB1 /* SourceContext.pbobjc.h in Headers */,
-				504F73FC37EA15899365BC98951245A4 /* Struct.pbobjc.h in Headers */,
-				7EDD009142F28AB1347B6FE4BFE0C091 /* Timestamp.pbobjc.h in Headers */,
-				42C9F8CAD2D54DF210CCC60770291DAE /* Type.pbobjc.h in Headers */,
-				CB4DF032A195DDF5327C40BCD2B82D64 /* Wrappers.pbobjc.h in Headers */,
+				E3165A4D9D0F55F0606BE24245544F04 /* Any.pbobjc.h in Headers */,
+				16C1B76B5B09DCF4D3D30F1B284936BF /* Api.pbobjc.h in Headers */,
+				905974FE0130CC15208964408802F7FF /* Duration.pbobjc.h in Headers */,
+				12B23AF30DF045E9D7BF85011902949C /* Empty.pbobjc.h in Headers */,
+				14D4E200287C07A61889F411408B6C53 /* FieldMask.pbobjc.h in Headers */,
+				B8C1C23B32F654347AB96DE13AF64781 /* GPBArray.h in Headers */,
+				C11C2E3BFB66E71A78824E1F7958A6FE /* GPBArray_PackagePrivate.h in Headers */,
+				49D8D5A7132D89120CBFFC3958FDF172 /* GPBBootstrap.h in Headers */,
+				884DF39E89EA75289DA2C9923D6304FD /* GPBCodedInputStream.h in Headers */,
+				D578E1ECBDE65949D1FB0ACD813B66C2 /* GPBCodedInputStream_PackagePrivate.h in Headers */,
+				ECA816C71D021C104A1605247DE87BF9 /* GPBCodedOutputStream.h in Headers */,
+				AC5A891519F88580EEB2DD73897A4727 /* GPBCodedOutputStream_PackagePrivate.h in Headers */,
+				B82FFCBF435F383CEC2A63A1CEF43412 /* GPBDescriptor.h in Headers */,
+				59130EE2727B125875BDBE220013546F /* GPBDescriptor_PackagePrivate.h in Headers */,
+				E6CA1A60EA67C8127A2D158BE30D13A7 /* GPBDictionary.h in Headers */,
+				4ECB3DD21A3B9BC9DABCAB68814C5823 /* GPBDictionary_PackagePrivate.h in Headers */,
+				1044778453BCDF016176D232C0BE0FDB /* GPBExtensionInternals.h in Headers */,
+				DCF8F34BD0686E4D15CDB6AD0592C9C9 /* GPBExtensionRegistry.h in Headers */,
+				189C01122D64C4AD283E9DA6C1B2782E /* GPBMessage.h in Headers */,
+				C5FBC50F16E6FDDC50B1A705D8935423 /* GPBMessage_PackagePrivate.h in Headers */,
+				0D55C350C8E3C26FE297053751C8E763 /* GPBProtocolBuffers.h in Headers */,
+				C4BB02A7A5783F68EB8818B31EEA4646 /* GPBProtocolBuffers_RuntimeSupport.h in Headers */,
+				E86D69A9491A7A18F44C2840B248C178 /* GPBRootObject.h in Headers */,
+				ACAB843AD00015A0483823056E284378 /* GPBRootObject_PackagePrivate.h in Headers */,
+				275D96EB96BAC7239E36550639F02F1B /* GPBRuntimeTypes.h in Headers */,
+				EEB672D286E729543DF2AEDB8C23FFC3 /* GPBUnknownField.h in Headers */,
+				A390D37380843BD17AF3C9F558A52983 /* GPBUnknownField_PackagePrivate.h in Headers */,
+				0FFDBD10086335C35EB7E1BED609B418 /* GPBUnknownFieldSet.h in Headers */,
+				47C06A2F5E531B58DCA5319DCFAD2381 /* GPBUnknownFieldSet_PackagePrivate.h in Headers */,
+				C36D4BAC2B0569383B404F8E264F9641 /* GPBUtilities.h in Headers */,
+				AFA70A958AA5141122382F1C67ABB90D /* GPBUtilities_PackagePrivate.h in Headers */,
+				367E7B23510D1D18B4DC73CDE3C81CE0 /* GPBWellKnownTypes.h in Headers */,
+				84D4D0EC0B7D5E69433BF48715DE88BE /* GPBWireFormat.h in Headers */,
+				E3A48DFF64B7B6FC6679B83A3396AB55 /* SourceContext.pbobjc.h in Headers */,
+				17C1B44ED9486109DF5592FD6A22FBCB /* Struct.pbobjc.h in Headers */,
+				D944A28D50F11642AC002B66B215F513 /* Timestamp.pbobjc.h in Headers */,
+				32CB34192FE7FA1642B7B7143F3D86D9 /* Type.pbobjc.h in Headers */,
+				134773A53DAD53F920DB199CCE9CD27F /* Wrappers.pbobjc.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		2C6F0A7C0FE8986621E4FE4C6AA55287 /* Pods-WordpressRN */ = {
+		16058D7057E2370C717BB58FBBFD8421 /* Pods-TheViralPages-tvOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 591B389A01E3EDA603F08C039B87F12B /* Build configuration list for PBXNativeTarget "Pods-WordpressRN" */;
+			buildConfigurationList = F3CA280DAE9355BEDECE150919DE40E6 /* Build configuration list for PBXNativeTarget "Pods-TheViralPages-tvOS" */;
 			buildPhases = (
-				BAA1E6C7208E7598D5C588585BCC6937 /* Sources */,
-				B55D41E498417B2E4715F743DCA02341 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				DEE8351C4789C5229DBF133C82288E84 /* PBXTargetDependency */,
-				C6AD2229251D5C89AC312A1954C87985 /* PBXTargetDependency */,
-			);
-			name = "Pods-WordpressRN";
-			productName = "Pods-WordpressRN";
-			productReference = 0FB6C08216EE80B16B5A628D16CB0968 /* libPods-WordpressRN.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		4EA084117C21DCD4D8864FE3BC4B052D /* Pods-WordpressRNTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 616878D0E710BDFF8FBE7B354E2C3FDD /* Build configuration list for PBXNativeTarget "Pods-WordpressRNTests" */;
-			buildPhases = (
-				BA703134F96873AC03D2E7CBEC6595ED /* Sources */,
-				CD2183A2220ABF8104E70CBFDD87A87E /* Frameworks */,
+				AD8E03263A1B0D57DB2D9F907AE48764 /* Sources */,
+				C623DC1DF7DFC7E67618168C8B40E632 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Pods-WordpressRNTests";
-			productName = "Pods-WordpressRNTests";
-			productReference = B2ABFE8ABC440D790936AE086DFC4F09 /* libPods-WordpressRNTests.a */;
+			name = "Pods-TheViralPages-tvOS";
+			productName = "Pods-TheViralPages-tvOS";
+			productReference = 9EB23DADE269B646BD025B9435BC8C7D /* libPods-TheViralPages-tvOS.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		4F870CFF1F9C07C89C0E0A13568AEB91 /* Protobuf */ = {
+		473721C95F6478B60D0826564C4D008E /* Protobuf */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FD429098331E67363EF05E67F6E84B43 /* Build configuration list for PBXNativeTarget "Protobuf" */;
+			buildConfigurationList = E8724352C7D8876B4E2C01C78411F255 /* Build configuration list for PBXNativeTarget "Protobuf" */;
 			buildPhases = (
-				853ED41798BEBA401A51B01B7F2F6651 /* Sources */,
-				1C52433F42DC4141F5D2B41971A9DD9D /* Frameworks */,
-				C9C78164AC12B046FFCD241B032030DF /* Headers */,
+				DD9F6EE7641058FC4D3C48B6ABF3077D /* Sources */,
+				66632E93529D7622EC7623A1A100B672 /* Frameworks */,
+				F0581525C90A269C8B705234EAEA5433 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -734,39 +646,25 @@
 			);
 			name = Protobuf;
 			productName = Protobuf;
-			productReference = 12C4271A2BCDC6E3FA7F5A1B745AC0AD /* libProtobuf.a */;
+			productReference = 859CD403CE54B7631B517FB3ABF31865 /* libProtobuf.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		5EFCDA9A43884EC3483D3514F345CEAF /* Pods-WordpressRN-tvOSTests */ = {
+		AE3C21D7E1BD0F631B3EAAE4ABD6C675 /* Pods-TheViralPages */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AEF59DA87D36E0FC1F2CFC9C8CA2A57D /* Build configuration list for PBXNativeTarget "Pods-WordpressRN-tvOSTests" */;
+			buildConfigurationList = 279EE8676C9FFC5768F20E402092F520 /* Build configuration list for PBXNativeTarget "Pods-TheViralPages" */;
 			buildPhases = (
-				A8EB394E891BB924EBF117DD09F1AF0D /* Sources */,
-				DBFC9697791410C2B8599C1774D3E23D /* Frameworks */,
+				F7EED68650CCD9365723609988AAFAF9 /* Sources */,
+				D5590D5248CAF4785C54443E1FB17B54 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				5FB0A955F6083DF26ABC18B8F254BD09 /* PBXTargetDependency */,
+				358ED65018B4C3FB4FED9667FE83811C /* PBXTargetDependency */,
 			);
-			name = "Pods-WordpressRN-tvOSTests";
-			productName = "Pods-WordpressRN-tvOSTests";
-			productReference = CA44BAA191B507F8664CDFD9F9B7C1BB /* libPods-WordpressRN-tvOSTests.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		A434B7AB418A9C835B0844E9CC9578E8 /* Pods-WordpressRN-tvOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A9C80577A3379AE73CF7AC05E8DC6CE8 /* Build configuration list for PBXNativeTarget "Pods-WordpressRN-tvOS" */;
-			buildPhases = (
-				648B2B2F6FB1C41ECAE07FC632EC93FB /* Sources */,
-				A36F9EC806EA4706E8D53D963E737863 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Pods-WordpressRN-tvOS";
-			productName = "Pods-WordpressRN-tvOS";
-			productReference = 09B114F96A07572D023C94DA8A602A24 /* libPods-WordpressRN-tvOS.a */;
+			name = "Pods-TheViralPages";
+			productName = "Pods-TheViralPages";
+			productReference = 51C243B55980FC2212F1BD6D4D2F1631 /* libPods-TheViralPages.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		FA9D13261AF395CF5D54BB3203DF2A6E /* GoogleToolboxForMac */ = {
@@ -783,7 +681,7 @@
 			);
 			name = GoogleToolboxForMac;
 			productName = GoogleToolboxForMac;
-			productReference = 77BB2BA6554DC232B9076B8B586CEC4F /* libGoogleToolboxForMac.a */;
+			productReference = BC460BA71171FE573D4729E5030A9C99 /* libGoogleToolboxForMac.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -803,66 +701,24 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = E1C471D555996CDBF3AA28458A95080C /* Products */;
+			productRefGroup = 819E404F7D9384D3482DB05C69B93105 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				FA9D13261AF395CF5D54BB3203DF2A6E /* GoogleToolboxForMac */,
-				2C6F0A7C0FE8986621E4FE4C6AA55287 /* Pods-WordpressRN */,
-				A434B7AB418A9C835B0844E9CC9578E8 /* Pods-WordpressRN-tvOS */,
-				5EFCDA9A43884EC3483D3514F345CEAF /* Pods-WordpressRN-tvOSTests */,
-				4EA084117C21DCD4D8864FE3BC4B052D /* Pods-WordpressRNTests */,
-				4F870CFF1F9C07C89C0E0A13568AEB91 /* Protobuf */,
+				AE3C21D7E1BD0F631B3EAAE4ABD6C675 /* Pods-TheViralPages */,
+				16058D7057E2370C717BB58FBBFD8421 /* Pods-TheViralPages-tvOS */,
+				473721C95F6478B60D0826564C4D008E /* Protobuf */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		648B2B2F6FB1C41ECAE07FC632EC93FB /* Sources */ = {
+		AD8E03263A1B0D57DB2D9F907AE48764 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E99008C96F056077290E6996481FBA4E /* Pods-WordpressRN-tvOS-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		853ED41798BEBA401A51B01B7F2F6651 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7E753DD8B75D9430BBE26AC5F3DDB27C /* Any.pbobjc.m in Sources */,
-				9DE1A2E95EDBAF3FEB279F08AFF454E4 /* Api.pbobjc.m in Sources */,
-				5F30646AE02E594908401CB1FC43D91F /* Duration.pbobjc.m in Sources */,
-				45C289C7D91F93742581E2A9768BF5C3 /* Empty.pbobjc.m in Sources */,
-				211B0CB441681421D2EAFC75FC4FFEA5 /* FieldMask.pbobjc.m in Sources */,
-				418066826F7B3B58A46860FC9503346D /* GPBArray.m in Sources */,
-				F19082784CB424C604F09CB3A8EA64B0 /* GPBCodedInputStream.m in Sources */,
-				1647DFFD0505AD181C210A948CDCFB80 /* GPBCodedOutputStream.m in Sources */,
-				2CAAC99D734BC0F02449D57A4EA55B40 /* GPBDescriptor.m in Sources */,
-				8C02DE2BA8E290D98FAE4C26B40FAC40 /* GPBDictionary.m in Sources */,
-				D8C4C83DEB37903254C78E69D0ED9B6C /* GPBExtensionInternals.m in Sources */,
-				42A791A3B21BE8D199048ABCFDCB1A17 /* GPBExtensionRegistry.m in Sources */,
-				38DC814F6C77EF587456D5AE421C29CD /* GPBMessage.m in Sources */,
-				345B39334FB74B7798D285260DC8D0EA /* GPBRootObject.m in Sources */,
-				1B14E64AB4A8D0AB7883ECA500F1841F /* GPBUnknownField.m in Sources */,
-				9208AF3D9030ABE9BCA9FB87D4E08179 /* GPBUnknownFieldSet.m in Sources */,
-				8DFD089E8DACB22CB4D1F262F3DD3716 /* GPBUtilities.m in Sources */,
-				6D567A47BD12383EFB3634714F0A36CD /* GPBWellKnownTypes.m in Sources */,
-				BF44E8FEC504954704A831766A286E62 /* GPBWireFormat.m in Sources */,
-				74822DA9C4ACEF86467CF89594EF49B7 /* Protobuf-dummy.m in Sources */,
-				BA5DBD4D3E46E6582D595AF722A37F30 /* SourceContext.pbobjc.m in Sources */,
-				7EAB409B67F8C5B5050B1A660D54BB9D /* Struct.pbobjc.m in Sources */,
-				44BD05928C2337EE94003FC312AA9502 /* Timestamp.pbobjc.m in Sources */,
-				3EB301ADF1797386F4E36E1F8B2750EA /* Type.pbobjc.m in Sources */,
-				1C6CF868480F80E42155544F2333CB89 /* Wrappers.pbobjc.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A8EB394E891BB924EBF117DD09F1AF0D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				49C0A8F3652B7AC6496007C635B1661C /* Pods-WordpressRN-tvOSTests-dummy.m in Sources */,
+				C5C8BC2CEF5EFA8CCA880E26F79ECBC8 /* Pods-TheViralPages-tvOS-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -876,63 +732,64 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BA703134F96873AC03D2E7CBEC6595ED /* Sources */ = {
+		DD9F6EE7641058FC4D3C48B6ABF3077D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B5BB29E9D3723FDE187B5E3831551BDE /* Pods-WordpressRNTests-dummy.m in Sources */,
+				D932C8746CA676BBC4EB1FD5A8658440 /* Any.pbobjc.m in Sources */,
+				1D6766AB00714E5EC4CA6F7265BD2450 /* Api.pbobjc.m in Sources */,
+				18D8B4203E7A5F9BF28FB6C1274DD58A /* Duration.pbobjc.m in Sources */,
+				39C3B6447C82FB2EA3264913F8898613 /* Empty.pbobjc.m in Sources */,
+				64D5BDDC669F6D9C3CFE610A393734D4 /* FieldMask.pbobjc.m in Sources */,
+				68C28E491A9F49E6CC6DFA3EBE0ED356 /* GPBArray.m in Sources */,
+				D2FA3BDE830830F9A8D61C0ACAD6BC40 /* GPBCodedInputStream.m in Sources */,
+				D85DB486ABDFE32E977B664CE8357CDE /* GPBCodedOutputStream.m in Sources */,
+				0169931432A986403AC52FDF15F298BF /* GPBDescriptor.m in Sources */,
+				A8A3DC5CF2CEA80EE91CCD1BC62B5F6A /* GPBDictionary.m in Sources */,
+				BE6C061F667A69A1214A7146895CAD5A /* GPBExtensionInternals.m in Sources */,
+				AA2B84E1DE2A093A3164D152A93219A7 /* GPBExtensionRegistry.m in Sources */,
+				1461B1078A5B4B3789B5302DF748906C /* GPBMessage.m in Sources */,
+				F79D69A657D9A6ED91BB4190CCA6F9C2 /* GPBRootObject.m in Sources */,
+				17EBB75AC23D9E3B672A87E6974C783D /* GPBUnknownField.m in Sources */,
+				D062D327AC0D25EB3FD34E1873B1FE6C /* GPBUnknownFieldSet.m in Sources */,
+				EB7E3EC346A015D6E59C54DCD662D465 /* GPBUtilities.m in Sources */,
+				9A35ED45A637316CEA1A49BB8A0B5738 /* GPBWellKnownTypes.m in Sources */,
+				91C517C17F9BB2DCFAEF70B6DEF65BB2 /* GPBWireFormat.m in Sources */,
+				2BDB8EB4C6CCFA1BA257949DFD74CC9B /* Protobuf-dummy.m in Sources */,
+				C941FF670AC8BB3E500A80F2D1F48B7F /* SourceContext.pbobjc.m in Sources */,
+				DEDFA629180E0156E49F6617D5CB4C33 /* Struct.pbobjc.m in Sources */,
+				7B6B91FE5EBDCE57E0C7F8D491DC7D44 /* Timestamp.pbobjc.m in Sources */,
+				16A37653921E61CF863324F9259ACCC3 /* Type.pbobjc.m in Sources */,
+				1C5B1B9C99B78477E00E2B9F1CB4C098 /* Wrappers.pbobjc.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BAA1E6C7208E7598D5C588585BCC6937 /* Sources */ = {
+		F7EED68650CCD9365723609988AAFAF9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49EE654DB9CE38D6E9F32C0A76337A26 /* Pods-WordpressRN-dummy.m in Sources */,
+				57953E7920F24EC2329AA9E772D51D22 /* Pods-TheViralPages-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		C6AD2229251D5C89AC312A1954C87985 /* PBXTargetDependency */ = {
+		358ED65018B4C3FB4FED9667FE83811C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Protobuf;
-			target = 4F870CFF1F9C07C89C0E0A13568AEB91 /* Protobuf */;
-			targetProxy = 305A65F038047BAF20F1E481C17B7F95 /* PBXContainerItemProxy */;
+			target = 473721C95F6478B60D0826564C4D008E /* Protobuf */;
+			targetProxy = 8D14BF7BA2A31EFC7D7ACA4B9C6146C3 /* PBXContainerItemProxy */;
 		};
-		DEE8351C4789C5229DBF133C82288E84 /* PBXTargetDependency */ = {
+		5FB0A955F6083DF26ABC18B8F254BD09 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = GoogleToolboxForMac;
 			target = FA9D13261AF395CF5D54BB3203DF2A6E /* GoogleToolboxForMac */;
-			targetProxy = C5B0B284F9D880DFFD924788EF624356 /* PBXContainerItemProxy */;
+			targetProxy = 43215D9E801BF1EE2337826F7509002E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0AB0324447F3BFEEF152B629039B23E8 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C173B32C72241D6D5C932233FDBDA776 /* Pods-WordpressRN.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MACH_O_TYPE = staticlib;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
 		0B43A67CEC0B68167428C47C8B9118F8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -974,9 +831,9 @@
 			};
 			name = Release;
 		};
-		14C9E2FA16AEEEEF392E2A59C6C3D4FA /* Debug */ = {
+		3CB854E888458C9FA5E770E76EFCCB43 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3A5037E5B1DA52F65D65DBB76983A34A /* Pods-WordpressRN-tvOS.debug.xcconfig */;
+			baseConfigurationReference = FB65E47D19EDD15B477D7BFFF1840ECE /* Pods-TheViralPages.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -984,8 +841,31 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MACH_O_TYPE = staticlib;
 				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		7AF6B4CBA895B2999D45DAC4BC259B4F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EFEE4BA1B0CD6919F7450875F7077761 /* Pods-TheViralPages-tvOS.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -995,80 +875,11 @@
 				SKIP_INSTALL = YES;
 				TVOS_DEPLOYMENT_TARGET = 9.2;
 			};
-			name = Debug;
+			name = Release;
 		};
-		562263392397912556AD41948B600D65 /* Release */ = {
+		80E3F728B2F8AA97727F94E22B861CCC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4985912EC58108202C6D3C1DE1C43152 /* Protobuf.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Protobuf/Protobuf-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		56249E81BAD1475984DC5E9925C01054 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 909988D2C88E9F2736D1996B417C9583 /* Pods-WordpressRNTests.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MACH_O_TYPE = staticlib;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		5D94A2514112BD3F1FAAF35A0C2ECD05 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6B537B1D8645A65ACE19082A878B2483 /* Pods-WordpressRN-tvOSTests.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MACH_O_TYPE = staticlib;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		79469F5FD495D69E0EA5194EEE648D0C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5BEE8EEC22D754AA8124244EB8387E2E /* Pods-WordpressRNTests.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1076,14 +887,14 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MACH_O_TYPE = staticlib;
+				GCC_PREFIX_HEADER = "Target Support Files/Protobuf/Protobuf-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
@@ -1134,9 +945,9 @@
 			};
 			name = Debug;
 		};
-		8A2335922AE42AD01081426F81C5C19A /* Release */ = {
+		8E8F8216EABAD74293E760CE4A44CBFB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2523EC0F95DBD6AED4F326315AF48080 /* Pods-WordpressRN.release.xcconfig */;
+			baseConfigurationReference = E92A46FB45984B21DCEC7508C1E57E9B /* Pods-TheViralPages.release.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1157,9 +968,32 @@
 			};
 			name = Release;
 		};
-		A1E151E83B8ADC6284305E4E9E4581BB /* Debug */ = {
+		A94A9BEBCBA3175A3080A4F91931C39A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4DDF113E22B6D280239F9AA3298F983C /* Pods-WordpressRN-tvOSTests.debug.xcconfig */;
+			baseConfigurationReference = 4985912EC58108202C6D3C1DE1C43152 /* Protobuf.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Protobuf/Protobuf-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		B637734AF6494CFF61F47043AB687212 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6CF4024F3A12ADBEBD3EBB900DC41F0 /* Pods-TheViralPages-tvOS.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1167,7 +1001,6 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MACH_O_TYPE = staticlib;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
@@ -1175,8 +1008,9 @@
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
+				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
+				TVOS_DEPLOYMENT_TARGET = 9.2;
 			};
 			name = Debug;
 		};
@@ -1226,78 +1060,23 @@
 			};
 			name = Debug;
 		};
-		D8BEB2BD9392F458FC3FC92EF31993D6 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4985912EC58108202C6D3C1DE1C43152 /* Protobuf.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Protobuf/Protobuf-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		E8D09D4B94A631497F477BAB169678A6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 89E6AAB5F22DED845B03B9C36E2DB737 /* Pods-WordpressRN-tvOS.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				MACH_O_TYPE = staticlib;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = appletvos;
-				SKIP_INSTALL = YES;
-				TVOS_DEPLOYMENT_TARGET = 9.2;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		279EE8676C9FFC5768F20E402092F520 /* Build configuration list for PBXNativeTarget "Pods-TheViralPages" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3CB854E888458C9FA5E770E76EFCCB43 /* Debug */,
+				8E8F8216EABAD74293E760CE4A44CBFB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				86EFD1A1A6F845D9567E3C8F433172CA /* Debug */,
 				0B43A67CEC0B68167428C47C8B9118F8 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		591B389A01E3EDA603F08C039B87F12B /* Build configuration list for PBXNativeTarget "Pods-WordpressRN" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0AB0324447F3BFEEF152B629039B23E8 /* Debug */,
-				8A2335922AE42AD01081426F81C5C19A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		616878D0E710BDFF8FBE7B354E2C3FDD /* Build configuration list for PBXNativeTarget "Pods-WordpressRNTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				79469F5FD495D69E0EA5194EEE648D0C /* Debug */,
-				56249E81BAD1475984DC5E9925C01054 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1311,29 +1090,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A9C80577A3379AE73CF7AC05E8DC6CE8 /* Build configuration list for PBXNativeTarget "Pods-WordpressRN-tvOS" */ = {
+		E8724352C7D8876B4E2C01C78411F255 /* Build configuration list for PBXNativeTarget "Protobuf" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				14C9E2FA16AEEEEF392E2A59C6C3D4FA /* Debug */,
-				E8D09D4B94A631497F477BAB169678A6 /* Release */,
+				80E3F728B2F8AA97727F94E22B861CCC /* Debug */,
+				A94A9BEBCBA3175A3080A4F91931C39A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AEF59DA87D36E0FC1F2CFC9C8CA2A57D /* Build configuration list for PBXNativeTarget "Pods-WordpressRN-tvOSTests" */ = {
+		F3CA280DAE9355BEDECE150919DE40E6 /* Build configuration list for PBXNativeTarget "Pods-TheViralPages-tvOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A1E151E83B8ADC6284305E4E9E4581BB /* Debug */,
-				5D94A2514112BD3F1FAAF35A0C2ECD05 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		FD429098331E67363EF05E67F6E84B43 /* Build configuration list for PBXNativeTarget "Protobuf" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D8BEB2BD9392F458FC3FC92EF31993D6 /* Debug */,
-				562263392397912556AD41948B600D65 /* Release */,
+				B637734AF6494CFF61F47043AB687212 /* Debug */,
+				7AF6B4CBA895B2999D45DAC4BC259B4F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

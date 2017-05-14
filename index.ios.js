@@ -6,7 +6,7 @@ import configureStore from './app/store/configureStore';
 
 const store = configureStore();
 
-class WordpressRN extends Component {
+class TheViralPages extends Component {
     render() {
         return (
             <Provider store={store}>
@@ -16,4 +16,4 @@ class WordpressRN extends Component {
     }
 }
 
-AppRegistry.registerComponent('WordpressRN', () => WordpressRN);
+AppRegistry.registerComponent('TheViralPages', () => TheViralPages);

@@ -5,14 +5,22 @@ import {
     View,
     Navigator,
     TouchableHighlight,
+    BackAndroid,
 } from 'react-native';
 import HomeNoAnimate from './HomeNoAnimate';
 import FCM, {FCMEvent, RemoteNotificationResult, WillPresentNotificationResult, NotificationType} from 'react-native-fcm';
 
-
 export default class Root extends Component {
+  constructor(props) {
+    super(props);
+    this.renderScene = this.renderScene.bind(this);
+    this.configureScene = this.configureScene.bind(this);
+    this.handleBack = this.handleBack.bind(this);
+    this.navigator = null;
+  }
 
   componentDidMount() {
+        BackAndroid.addEventListener('hardwareBackPress', this.handleBack);
         FCM.requestPermissions(); // for iOS
         FCM.getFCMToken().then(token => {
             console.log(token)
@@ -54,9 +62,18 @@ export default class Root extends Component {
 
     componentWillUnmount() {
         // stop listening for events
+        BackAndroid.removeEventListener('hardwareBackPress', this.handleBack);
         this.notificationListener.remove();
         this.refreshTokenListener.remove();
     }
+
+  handleBack() {
+    if (this.navigator && this.navigator.getCurrentRoutes().length > 1){
+      this.navigator.pop();
+      return true;
+    }
+    return false;
+  }
 
 
   configureScene(route) {
@@ -66,12 +83,12 @@ export default class Root extends Component {
     };
   }
 
-    renderScene(route, navigator) {
-        const Component = route.component;
-        return (
-            <Component navigator={navigator} {...route.passProps} />
-        )
-    }
+  renderScene(route, navigator) {
+      const Component = route.component;
+      return (
+          <Component navigator={navigator} {...route.passProps} />
+      )
+  }
 
     render() {
         const defaultRoute = {
@@ -81,6 +98,7 @@ export default class Root extends Component {
         };
         return (
             <Navigator
+                ref={navigator => { this.navigator = navigator }}
                 renderScene={this.renderScene.bind(this)}
                 configureScene={this.configureScene.bind(this)}
                 initialRoute={defaultRoute}
